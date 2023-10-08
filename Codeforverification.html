@@ -1,0 +1,78 @@
+<!-- to install library -->
+composer require twilio/sdk
+<!-- end of installation -->
+
+
+<?php
+require_once 'vendor/autoload.php'; // Include the Twilio PHP library
+
+use Twilio\Rest\Client;
+
+// Your Twilio Account SID and Auth Token
+$accountSid = 'your_account_sid';
+$authToken = 'your_auth_token';
+
+// Initialize the Twilio client
+$twilio = new Client($accountSid, $authToken);
+    $phone = $_POST['phone'];
+    
+    // Generate a random verification code (you can customize this)
+    $verificationCode = mt_rand(1000, 9999);
+
+    // Send the verification code via SMS
+    $twilio->messages->create(
+        $phone,
+        [
+            'from' => 'your_twilio_phone_number',
+            'body' => "Your verification code is: $verificationCode",
+        ]
+    );
+
+    // Store the verification code in a session or database for later verification
+    $_SESSION['verification_code'] = $verificationCode;
+
+    // Redirect to a verification page
+    header('Location: verify.php');
+    exit;
+?>
+
+<!-- HTML form to collect phone number -->
+<form method="post">
+    <label for="phone">Phone Number:</label>
+    <input type="text" name="phone" id="phone" required>
+    <button type="submit">Send Verification Code</button>
+</form>
+
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $enteredCode = $_POST['code'];
+    $storedCode = $_SESSION['verification_code'];
+
+    if ($enteredCode === $storedCode) {
+        // Code is valid; proceed with user authentication
+        echo "Phone number authenticated successfully!";
+        // You can also store the user's phone number in your database at this point.
+    } else {
+        echo "Invalid verification code. Please try again.";
+    }
+}
+?>
+
+<!-- HTML form to enter verification code -->
+<form method="post">
+    <label for="code">Verification Code:</label>
+    <input type="text" name="code" id="code" required>
+    <button type="submit">Verify</button>
+</form>
+
+
+
+        <!-- Account SID -->
+        ACa8678665640a8ec699294e955345f388
+        <!-- end of account SID -->
+
+        <!-- authentication Token -->
+        ab349a5ace6d880d85a2e34aa1fe3f74
+        <!-- End of authentication Token -->

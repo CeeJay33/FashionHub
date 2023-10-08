@@ -1,0 +1,9 @@
+{
+    "require": {
+        "swiftmailer/swiftmailer": "6.0",
+        "phpmailer/phpmailer": "^6.8",
+        "league/oauth2-client": "^2.7",
+        "league/oauth2-google": "^4.0",
+        "twilio/sdk": "^6.0"
+    }
+}

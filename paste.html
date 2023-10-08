@@ -1,0 +1,1082 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+/* Notification*/
+
+.toast{
+    width: 400px;
+    position: fixed;
+    bottom: 70%;
+    right: 0;
+    line-height: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #088178;
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px)); 
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toast.active{
+    transform: translateX(0%);
+}
+
+.toast .toast-content{
+    display: flex;
+    align-items: center;
+}
+
+.toast-content .message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.toast .toast-content .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: #088178;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.message .text{
+    font-size: 15px;
+    font-weight: 400;
+    color: #666666;
+
+}
+
+.message .text.text-1{
+    font-weight: 600;
+    color: hsl(0, 0%, 0%);
+}
+
+.toast .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.toast .close:hover{
+    opacity: 0.5;
+}
+
+.toast .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+
+.toast .progress::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #088178;
+}
+
+.progress.active:before{
+    animation: progress 5s linear forwards;
+}
+
+        /* Loading Screen */
+
+.loading img{
+    position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 400px;
+	padding: 50px;
+    display: none;
+}
+
+
+.toast1{
+    width: 385px;
+    height: 200px;
+    position: fixed;
+    bottom: 40%;
+    right: 68%;
+    display: none;
+    line-height: 40px;
+    background: #ffffff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 3);
+    border-left: 6px solid #088178;
+    border-right: 6px solid #088178;
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px)); 
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toast1.active{
+    transform: translateX(0%);
+}
+
+.toast1 .toast-content1{
+    display: flex;
+    align-items: center;
+}
+
+.toast-content1 .message1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 60px;
+}
+
+.message1 .text1{
+    font-size: 15px;
+    font-weight: 900;
+    color: #666666;
+
+}
+
+.message1 .text1.text-1{
+    font-weight: 600;
+    color: hsl(0, 0%, 0%);
+}
+
+.toast1 .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.toast1 .close:hover{
+    opacity: 0.5;
+}
+
+.toast-content1 .message1 #btn{
+    background-color: #088178;
+    color: #fff;
+    margin: 15px 5px;
+    width: 210%;
+}
+
+
+/* Contact Us */
+
+#contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact-details .details{
+    width: 40%;
+}
+
+#contact-details .details span,
+#form-details form span{
+    font-size: 12px;
+}
+
+#contact-details .details h2,
+#form-details form h2{
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#contact-details .details h3{
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+#contact-details .details li{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+#contact-details .details li i{
+    font-size: 14px;
+    padding-right: 22px;
+}
+
+#contact-details .details li p{
+    margin: 0;
+    font-size: 14px;
+}
+
+#contact-details .map{
+    width: 55%;
+    height: 400px;
+}
+
+#contact-details .map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#form-details{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    padding: 80px;border: 1px solid #e1e1e1;
+}
+
+#form-details form{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form button{
+    background-color: #088178;
+    color: #fff;
+}
+
+
+#form-details .people div{
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+#form-details .people div img{
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+#form-details .people div p{
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+#form-details .people div p span{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+@keyframes progress{
+    100%{
+        right: 100%;
+    }
+}
+
+
+/* Cart */
+
+
+    .toast1 {
+        width: 385px;
+        height: 200px;
+        position: fixed;
+        bottom: 40%;
+        right: 104%;
+        display: none;
+        line-height: 40px;
+        border-radius: 12px 12px 0 0;
+        background: #ffffff;
+        padding: 20px 35px 20px 25px;
+        box-shadow: 0 7px 20px rgba(0, 0, 0, 3);
+        border-left: 6px solid #088178;
+        border-right: 6px solid #088178;
+        overflow: hidden;
+        transform: translateX(calc(100% + 30px));
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//for uploading images to database//
+
+<?php
+include_once "config.php";
+
+
+
+function uploadImage($formName) {
+    global $conn;
+    
+    if (isset($_POST[$formName])) {
+        if (isset($_FILES[$formName]) && $_FILES[$formName]["error"] === 0) {
+            $targetDir = "clothes/";
+            $imageName = basename($_FILES[$formName]["name"]);
+            $targetPath = $targetDir . $imageName;
+
+            if (move_uploaded_file($_FILES[$formName]["tmp_name"], $targetPath)) {
+                $unique_id = $_POST["unique_id1"]; // Get unique_id from the form input
+                $insertQuery = "INSERT INTO images (name, imageUrl, user_id) VALUES (?, ?, ?)";
+                $stmt = $conn->prepare($insertQuery);
+                $stmt->bind_param("ssi",$imageName, $targetPath, $unique_id);
+
+                if ($stmt->execute()) {
+                    echo "<script>alert('Image uploaded successfully.');</script>";
+                } else {
+                    echo "<script>alert('Error uploading image to database.');</script>";
+                }
+
+                $stmt->close();
+            } else {
+                echo "<script>alert('Error moving uploaded image.');</script>";
+            }
+        } else {
+            echo "<script>alert('Error uploading image.');</script>";
+        }
+    }
+}
+
+uploadImage("submit1");
+uploadImage("submit2");
+uploadImage("submit3");
+
+$conn->close();
+?>
+
+
+
+
+
+javascripts
+
+<script>
+ document.addEventListener('DOMContentLoaded', function () {
+            //this code is to Show the toast notification when the page loads
+            const toast = document.querySelector(".toast");
+            const closeIcon = document.querySelector(".close");
+            const progress = document.querySelector(".progress");
+
+            toast.classList.add('active');
+            progress.classList.add("active");
+
+            setTimeout(() => {
+                toast.classList.remove('active');
+            }, 5000);
+
+            setTimeout(() => {
+                toast.classList.remove('active');
+            }, 5300);
+
+            closeIcon.addEventListener('click', () => {
+                toast.classList.remove('active');
+                setTimeout(() => {
+                    progress.classList.remove("active");
+                }, 300);
+            });
+        });
+
+//  var Bar =  document.querySelector('.hidden');
+//  var Mess =  document.querySelector('.mes');
+//  var Icon =  document.querySelector('.icon');
+
+//  function show(){
+//     Bar.style.display = 'flex';
+//     Mess.style.display = 'none';
+//  }
+
+//  function clos(){
+//     Bar.style.display = 'none';
+//     Mess.style.display = 'block';
+//  }
+
+//     document.addEventListener("DOMContentLoaded", function () {
+//     const chatMessages = document.getElementById("chat-messages");
+//     const messageInput = document.getElementById("message-input");
+//     const sendButton = document.getElementById("send-button");
+
+//     sendButton.addEventListener("click", function () {
+//         const messageText = messageInput.value.trim();
+//         if (messageText !== "") {
+//             const messageElement = document.createElement("div");
+//             messageElement.classList.add("message", "sent");
+//             messageElement.textContent = messageText;
+
+//             chatMessages.appendChild(messageElement);
+//             messageInput.value = "";
+//         }
+//     });
+
+//     function receiveMessage(messageText) {
+//         const messageElement = document.createElement("div");
+//         messageElement.classList.add("message", "received");
+//         messageElement.textContent = messageText;
+
+//         chatMessages.appendChild(messageElement);
+//     }
+
+//     // Simulate receiving a message after a delay
+//     setTimeout(function () {
+//         receiveMessage("Hello! How are you?");
+//     }, 2000);
+
+//     setTimeout(function () {
+//         receiveMessage("I am a Bot and i'm here to a");
+//     }, 10000);
+
+//     setTimeout(function () {
+//         receiveMessage("");
+//     }, 20000);
+
+//     setTimeout(function () {
+//         receiveMessage("Well said please contact me if you are interested in me");
+//     }, 30000);
+
+//     setTimeout(function () {
+//         receiveMessage("Well said please contact me if you are interested in me");
+//     }, 40000);
+//     setTimeout(function () {
+//         receiveMessage("Well said please contact me if you are interested in me");
+//     }, 40000);
+// });
+//     document.addEventListener("DOMContentLoaded", function () {
+//             const navRight = document.querySelector(".nav-right");
+//             const chatBox = document.querySelector(".chat-box");
+//             const toggleChat = document.getElementById("toggle-chat");
+//             const messengerIcon = document.getElementById("messenger-icon");
+//             const messageInput = document.getElementById("message-input");
+//             const sendButton = document.getElementById("send-button");
+//             const chatMessages = document.getElementById("chat-messages");
+
+//             toggleChat.addEventListener("click", function () {
+//                 chatBox.classList.toggle("hidden");
+//             });
+
+//             messengerIcon.addEventListener("click", function () {
+//                 chatBox.classList.toggle("hidden");
+//             });
+
+//             sendButton.addEventListener("click", function () {
+//                 const message = messageInput.value;
+//                 if (message.trim() !== "") {
+//                     const messageElement = document.createElement("div");
+//                     messageElement.classList.add("chat-message");
+//                     messageElement.textContent = message;
+//                     chatMessages.appendChild(messageElement);
+//                     messageInput.value = "";
+//                 }
+//             });
+//         });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+        const boxes = document.querySelectorAll('.box1');
+
+        boxes.forEach(function(box, index) {
+            const fileInput = box.querySelector('.box1-file');
+            const image = box.querySelector('.box1-image');
+
+            fileInput.addEventListener('change', function() {
+                const file = fileInput.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        image.src = event.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const fileInputs = document.querySelectorAll(".box1-file");
+    const imagePreviews = document.querySelectorAll(".box1-image");
+
+    fileInputs.forEach((fileInput, index) => {
+        fileInput.addEventListener("change", (event) => {
+            const selectedImage = event.target.files[0];
+            if (selectedImage) {
+                const imageUrl = URL.createObjectURL(selectedImage);
+                imagePreviews[index].setAttribute("src", imageUrl);
+            }
+        });
+    });
+});
+
+    const body = document.querySelector("body"),
+    Sidebars_toggle = body.querySelector(".sidetoggle");
+    sidebar = body.querySelector("nav");
+
+
+    Sidebars_toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+    })
+
+    const dashboardLinks = document.querySelectorAll('.dashboard-link');
+
+    dashboardLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            dashboardLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            link.classList.add('active');
+        });
+    });
+
+</script>
+
+
+
+
+
+	fa fa-address-book	
+fa fa-address-book-o	
+fa fa-address-card	
+fa fa-address-card-o	
+fa fa-adjust	
+fa fa-american-sign-language-interpreting	
+fa fa-anchor	
+fa fa-archive	
+fa fa-area-chart	
+fa fa-arrows	
+fa fa-arrows-h	
+fa fa-arrows-v	
+fa fa-asl-interpreting	
+fa fa-assistive-listening-systems	
+fa fa-asterisk	
+fa fa-at	
+fa fa-automobile	
+fa fa-audio-description	
+fa fa-balance-scale	
+fa fa-ban	
+fa fa-bank	
+fa fa-bar-chart	
+fa fa-bar-chart-o	
+fa fa-barcode	
+fa fa-bars	
+fa fa-bath	
+fa fa-bathtub	
+fa fa-battery-0	
+fa fa-battery-1	
+fa fa-battery-2	
+fa fa-battery-3	
+fa fa-battery-4	
+fa fa-battery-empty	
+fa fa-battery-full	
+fa fa-battery-half	
+fa fa-battery-quarter	
+fa fa-battery-three-quarters	
+fa fa-bed	
+fa fa-beer	
+fa fa-bell	
+fa fa-bell-o	
+fa fa-bell-slash	
+fa fa-bell-slash-o	
+fa fa-bicycle	
+fa fa-binoculars	
+fa fa-birthday-cake	
+fa fa-blind	
+fa fa-bolt	
+fa fa-bomb	
+fa fa-book	
+fa fa-bookmark	
+fa fa-bookmark-o	
+fa fa-braille	
+fa fa-briefcase	
+fa fa-bug	
+fa fa-building	
+fa fa-building-o	
+fa fa-bullhorn	
+fa fa-bullseye	
+fa fa-bus	
+fa fa-cab	
+fa fa-calculator	
+fa fa-calendar	
+fa fa-calendar-o	
+fa fa-calendar-check-o	
+fa fa-calendar-minus-o	
+fa fa-calendar-plus-o	
+fa fa-calendar-times-o	
+fa fa-camera	
+fa fa-camera-retro	
+fa fa-car	
+fa fa-caret-square-o-down	
+fa fa-caret-square-o-left	
+fa fa-caret-square-o-right	
+fa fa-caret-square-o-up	
+fa fa-cart-arrow-down	
+fa fa-cart-plus	
+fa fa-cc	
+fa fa-certificate	
+fa fa-check	
+fa fa-check-circle	
+fa fa-check-circle-o	
+fa fa-check-square	
+fa fa-check-square-o	
+fa fa-child	
+fa fa-circle	
+fa fa-circle-o	
+fa fa-circle-o-notch	
+fa fa-circle-thin	
+fa fa-clock-o	
+fa fa-clone	
+fa fa-close	
+fa fa-cloud	
+fa fa-cloud-download	
+fa fa-cloud-upload	
+fa fa-code	
+fa fa-code-fork	
+fa fa-coffee	
+fa fa-cog	
+fa fa-cogs	
+fa fa-comment	
+fa fa-comment-o	
+fa fa-comments	
+fa fa-comments-o	
+fa fa-commenting	
+fa fa-commenting-o	
+fa fa-compass	
+fa fa-copyright	
+fa fa-credit-card	
+fa fa-credit-card-alt	
+fa fa-creative-commons	
+fa fa-crop	
+fa fa-crosshairs	
+fa fa-cube	
+fa fa-cubes	
+fa fa-cutlery	
+fa fa-dashboard	
+fa fa-database	
+fa fa-deaf	
+fa fa-deafness	
+fa fa-desktop	
+fa fa-diamond	
+fa fa-dot-circle-o	
+fa fa-download	
+fa fa-drivers-license	
+fa fa-drivers-license-o	
+fa fa-edit	
+fa fa-ellipsis-h	
+fa fa-ellipsis-v	
+fa fa-envelope	
+fa fa-envelope-o	
+fa fa-envelope-open	
+fa fa-envelope-open-o	
+fa fa-envelope-square	
+fa fa-eraser	
+fa fa-exchange	
+fa fa-exclamation	
+fa fa-exclamation-circle	
+fa fa-exclamation-triangle	
+fa fa-external-link	
+fa fa-external-link-square	
+fa fa-eye	
+fa fa-eye-slash	
+fa fa-eyedropper	
+fa fa-fax	
+fa fa-female	
+fa fa-fighter-jet	
+fa fa-file-archive-o	
+fa fa-file-audio-o	
+fa fa-file-code-o	
+fa fa-file-excel-o	
+fa fa-file-image-o	
+fa fa-file-movie-o	
+fa fa-file-pdf-o	
+fa fa-file-photo-o	
+fa fa-file-picture-o	
+fa fa-file-powerpoint-o	
+fa fa-file-sound-o	
+fa fa-file-video-o	
+fa fa-file-word-o	
+fa fa-file-zip-o	
+fa fa-film	
+fa fa-filter	
+fa fa-fire	
+fa fa-fire-extinguisher	
+fa fa-flag	
+fa fa-flag-checkered	
+fa fa-flag-o	
+fa fa-flash	
+fa fa-flask	
+fa fa-folder	
+fa fa-folder-o	
+fa fa-folder-open	
+fa fa-folder-open-o	
+fa fa-frown-o	
+fa fa-futbol-o	
+fa fa-gamepad	
+fa fa-gavel	
+fa fa-gear	
+fa fa-gears	
+fa fa-genderless	
+fa fa-gift	
+fa fa-glass	
+fa fa-globe	
+fa fa-graduation-cap	
+fa fa-group	
+fa fa-hard-of-hearing	
+fa fa-hdd-o	
+fa fa-handshake-o	
+fa fa-hashtag	
+fa fa-headphones	
+fa fa-heart	
+fa fa-heart-o	
+fa fa-heartbeat	
+fa fa-history	
+fa fa-home	
+fa fa-hotel	
+fa fa-hourglass	
+fa fa-hourglass-1	
+fa fa-hourglass-2	
+fa fa-hourglass-3	
+fa fa-hourglass-end	
+fa fa-hourglass-half	
+fa fa-hourglass-o	
+fa fa-hourglass-start	
+fa fa-i-cursor	
+fa fa-id-badge	
+fa fa-id-card	
+fa fa-id-card-o	
+fa fa-image	
+fa fa-inbox	
+fa fa-industry	
+fa fa-info	
+fa fa-info-circle	
+fa fa-institution	
+fa fa-key	
+fa fa-keyboard-o	
+fa fa-language	
+fa fa-laptop	
+fa fa-leaf	
+fa fa-legal	
+fa fa-lemon-o	
+fa fa-level-down	
+fa fa-level-up	
+fa fa-life-bouy	
+fa fa-life-buoy	
+fa fa-life-ring	
+fa fa-life-saver	
+fa fa-lightbulb-o	
+fa fa-line-chart	
+fa fa-location-arrow	
+fa fa-lock	
+fa fa-low-vision	
+fa fa-magic	
+fa fa-magnet	
+fa fa-mail-forward	
+fa fa-mail-reply	
+fa fa-mail-reply-all	
+fa fa-male	
+fa fa-map	
+fa fa-map-o	
+fa fa-map-pin	
+fa fa-map-signs	
+fa fa-map-marker	
+fa fa-meh-o	
+fa fa-microchip	
+fa fa-microphone	
+fa fa-microphone-slash	
+fa fa-minus	
+fa fa-minus-circle	
+fa fa-minus-square	
+fa fa-minus-square-o	
+fa fa-mobile	
+fa fa-mobile-phone	
+fa fa-money	
+fa fa-moon-o	
+fa fa-mortar-board	
+fa fa-motorcycle	
+fa fa-mouse-pointer	
+fa fa-music	
+fa fa-navicon	
+fa fa-newspaper-o	
+fa fa-object-group	
+fa fa-object-ungroup	
+fa fa-paint-brush	
+fa fa-paper-plane	
+fa fa-paper-plane-o	
+fa fa-paw	
+fa fa-pencil	
+fa fa-pencil-square	
+fa fa-pencil-square-o	
+fa fa-percent	
+fa fa-phone	
+fa fa-phone-square	
+fa fa-photo	
+fa fa-picture-o	
+fa fa-pie-chart	
+fa fa-plane	
+fa fa-plug	
+fa fa-plus	
+fa fa-plus-circle	
+fa fa-plus-square	
+fa fa-plus-square-o	
+fa fa-podcast	
+fa fa-power-off	
+fa fa-print	
+fa fa-puzzle-piece	
+fa fa-qrcode	
+fa fa-question	
+fa fa-question-circle	
+fa fa-question-circle-o	
+fa fa-quote-left	
+fa fa-quote-right	
+fa fa-random	
+fa fa-recycle	
+fa fa-refresh	
+fa fa-registered	
+fa fa-remove	
+fa fa-reorder	
+fa fa-reply	
+fa fa-reply-all	
+fa fa-retweet	
+fa fa-road	
+fa fa-rocket	
+fa fa-rss	
+fa fa-rss-square	
+fa fa-s15	
+fa fa-search	
+fa fa-search-minus	
+fa fa-search-plus	
+fa fa-send	
+fa fa-send-o	
+fa fa-server	
+fa fa-share	
+fa fa-share-alt	
+fa fa-share-alt-square	
+fa fa-share-square	
+fa fa-share-square-o	
+fa fa-shield	
+fa fa-ship	
+fa fa-shopping-bag	
+fa fa-shopping-basket	
+fa fa-shopping-cart	
+fa fa-shower	
+fa fa-sign-in	
+fa fa-sign-out	
+fa fa-sign-language	
+fa fa-signal	
+fa fa-signing	
+fa fa-sitemap	
+fa fa-sliders	
+fa fa-smile-o	
+fa fa-snowflake-o	
+fa fa-soccer-ball-o	
+fa fa-sort	
+fa fa-sort-alpha-asc	
+fa fa-sort-alpha-desc	
+fa fa-sort-amount-asc	
+fa fa-sort-amount-desc	
+fa fa-sort-asc	
+fa fa-sort-desc	
+fa fa-sort-down	
+fa fa-sort-numeric-asc	
+fa fa-sort-numeric-desc	
+fa fa-sort-up	
+fa fa-space-shuttle	
+fa fa-spinner	
+fa fa-spoon	
+fa fa-square	
+fa fa-square-o	
+fa fa-star	
+fa fa-star-half	
+fa fa-star-half-empty	
+fa fa-star-half-full	
+fa fa-star-half-o	
+fa fa-star-o	
+fa fa-sticky-note	
+fa fa-sticky-note-o	
+fa fa-street-view	
+fa fa-suitcase	
+fa fa-sun-o	
+fa fa-support	
+fa fa-tablet	
+fa fa-tachometer	
+fa fa-tag	
+fa fa-tags	
+fa fa-tasks	
+fa fa-taxi	
+fa fa-television	
+fa fa-terminal	
+fa fa-thermometer	
+fa fa-thermometer-0	
+fa fa-thermometer-1	
+fa fa-thermometer-2	
+fa fa-thermometer-3	
+fa fa-thermometer-4	
+fa fa-thermometer-empty	
+fa fa-thermometer-full	
+fa fa-thermometer-half	
+fa fa-thermometer-quarter	
+fa fa-thermometer-three-quarters	
+fa fa-thumb-tack	
+fa fa-thumbs-down	
+fa fa-thumbs-o-up	
+fa fa-thumbs-up	
+fa fa-ticket	
+fa fa-times	
+fa fa-times-circle	
+fa fa-times-circle-o	
+fa fa-times-rectangle	
+fa fa-times-rectangle-o	
+fa fa-tint	
+fa fa-toggle-down	
+fa fa-toggle-left	
+fa fa-toggle-right	
+fa fa-toggle-up	
+fa fa-toggle-off	
+fa fa-toggle-on	
+fa fa-trademark	
+fa fa-trash	
+fa fa-trash-o	
+fa fa-tree	
+fa fa-trophy	
+fa fa-truck	
+fa fa-tty	
+fa fa-tv	
+fa fa-umbrella	
+fa fa-universal-access	
+fa fa-university	
+fa fa-unlock	
+fa fa-unlock-alt	
+fa fa-unsorted	
+fa fa-upload	
+fa fa-user	
+fa fa-user-circle	
+fa fa-user-circle-o	
+fa fa-user-o	
+fa fa-user-plus	
+fa fa-user-secret	
+fa fa-user-times	
+fa fa-users	
+fa fa-vcard	
+fa fa-vcard-o	
+fa fa-video-camera	
+fa fa-volume-control-phone	
+fa fa-volume-down	
+fa fa-volume-off	
+fa fa-volume-up	
+fa fa-warning	
+fa fa-wheelchair	
+fa fa-wheelchair-alt	
+fa fa-window-close	
+fa fa-window-close-o	
+fa fa-window-maximize	
+fa fa-window-minimize	
+fa fa-window-restore	
+fa fa-wifi	
+fa fa-wrench	
+
+
+
+https://youtu.be/HmRVPOOmij0
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Add your CSS styles and scripts here -->
+  <style>
+    /* Add your CSS styles here */
+  </style>
+</head>
+<body>
+
+<div class="layout layout2">
+  <!-- Your existing card structure with images and Contact buttons -->
+  <div class="all">
+    <!-- Use PHP to fetch data from the database and generate cards -->
+    <?php
+    // Connect to your database (modify as needed)
+    $pdo = new PDO('mysql:host=localhost;dbname=your_db', 'your_username', 'your_password');
+
+    // Fetch card data from the database
+    $stmt = $pdo->query('SELECT * FROM cards');
+    while ($card = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    ?>
+    <div class="card" onclick="showCard(<?php echo $card['id']; ?>)">
+      <!-- Card content -->
+      <img src="<?php echo $card['image']; ?>" alt="<?php echo $card['name']; ?>" style="width:100%">
+      <h1><?php echo $card['name']; ?></h1>
+      <p class="title"><?php echo $card['title']; ?></p>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <p><button onclick="showCard(<?php echo $card['id']; ?>)">Contact</button></p>
+    </div>
+    <?php } ?>
+  </div>
+</div>
+
+<div class="layout layout3">
+  <div class="Contact">
+    <!-- Initially empty Contact div that will be populated dynamically -->
+  </div>
+</div>
+
+<script>
+  function showCard(cardId) {
+    // Get the card data using PHP-generated JavaScript
+    var cardData = <?php echo json_encode($yourDataArray); ?>;
+
+    // Find the selected card by its ID
+    var selectedCard = cardData.find(function(card) {
+      return card.id === cardId;
+    });
+
+    // Clone the selected card
+    var card = document.createElement('div');
+    card.innerHTML = `
+      <div class="card">
+        <img src="${selectedCard.image}" alt="${selectedCard.name}" style="width:100%">
+        <h1>${selectedCard.name}</h1>
+        <p class="title">${selectedCard.title}</p>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+      </div>
+    `;
+
+    // Clear any existing content in the Contact div
+    document.querySelector('.Contact').innerHTML = '';
+
+    // Append the cloned card to the Contact div
+    document.querySelector('.Contact').appendChild(card);
+  }
+</script>
+
+</body>
+</html>

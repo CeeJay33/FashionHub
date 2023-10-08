@@ -1,0 +1,587 @@
+<?php
+    session_start();
+    include "config.php";
+    $unique_id = $_SESSION['unique_id'];
+    if(empty($unique_id)){
+        header("Location: Login.php");
+    }
+    $qry = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = '{$unique_id}'");
+    if(mysqli_num_rows($qry) > 0){
+        $row = mysqli_fetch_assoc($qry);
+        if($row){
+            $_SESSION['verification_status'] = $row['verification_status'];
+            if($row['verification_status'] != 'verified'){
+            header("Location: verify.php");
+            }
+        }
+    }
+    ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Online Boutique Store/Shop">
+    <meta name="keywords" content="Clothes,bags,shoes,">
+	<script src="https://kit.fontawesome.com/d5bd3063f6.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css">
+    <title>Kay_Jay_Boutique</title>
+    <link rel="icon" href="./others/logo.png" type="image/x-icon">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background: #f3f7fa;
+        overflow: hidden;
+    }
+
+    .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+}
+
+.navigation img{
+    width: 180px;
+    height: 80px;
+}
+
+.navigation a {
+  float: left;
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  z-index: 999;
+
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  margin: auto;
+  border: none;
+  outline: none;
+  color: rgb(14, 8, 8);
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 18px;
+    font-family: sans-serif;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.navigation a:hover, .dropdown:hover .dropbtn {
+  background-color: #000;
+  color: #fff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.list{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-family: sans-serif;
+}
+
+.list li{
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.third{
+    display: flex;
+    margin-right: 20px;
+    gap: 25px;
+}
+
+.third li{
+    list-style: none;
+}
+
+.third .chin{
+  background: #fff;
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 13px;
+  font-weight: lighter;
+  line-height: 50px;
+  border-radius: 25px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+
+.third .chin img {
+  float: right;
+  margin: 0 10px 0 -25px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* griding layout */
+
+.grid_layout {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden; /* Prevents horizontal scrolling */
+  }
+
+  .layout {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .layout1 {
+    grid-column: span 1;
+    grid-row: span 27;
+    border-right: none;
+    border-top: none;
+    position: sticky;
+    top: 0;
+  }
+
+  .layout2 {
+    grid-column: span 2;
+    grid-row: span 27;
+    overflow-y: scroll;
+    z-index: 0;
+    max-height: 100vh; 
+    
+
+  }
+
+  .layout4 {
+    grid-column: span 1;
+    grid-row: span 27;
+    border-left: none;
+    border-top: none;
+    position: sticky;
+    top: 0;
+    /* You can adjust the top value to control where the fixed box starts */
+  }
+
+  /* content for the left layer */
+.layout.layout1{
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+}
+
+.layout.layout1 hr{
+  border-color: #c2c2c2;
+}
+
+.left_bar{
+  padding: 18px 0;
+  display: flex;
+}
+
+.left_bar h4{
+  font-family: sans-serif;
+  font-weight: 550;
+  padding-left: 10px;
+}
+.left_bar i{
+  color: rgb(51, 116, 161);
+}
+
+.left_bar .chi{
+  display: inline-block;
+  padding-top: 3px;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.left_bar .chi h4{
+  padding-top: 12px;
+  font-size: 16px;
+}
+
+.left_bar .chi img{
+  float: left;
+  margin: 22px -30px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.left_bar a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* content for the right bar */
+.layout.layout4{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+
+.layout.layout4 h3{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  font-weight: 500;
+
+}
+
+.layout.layout4 .search input{
+  width: 230px;
+  height: 30px;
+  border-left: none;
+  border-top: none;
+  border-radius: none;
+  outline: none;
+  font-size: 16px;
+}
+.right_bar{
+  display: flex;
+  padding: 20px 0;
+}
+
+.Contact{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chips {
+  background: #fff;
+  display: inline-block;
+  width: 230px;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 13px;
+  font-weight: lighter;
+  line-height: 50px;
+  border-radius: 25px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.chips:hover{
+  border:1px solid rgb(168, 203, 228);
+}
+
+.chips img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+  /* content for the middle layer */
+
+  .lay_color{
+    background: #fff;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #c2c2c2;
+    border-top: none;
+    margin-bottom: 20px;
+  }
+  .chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.chip:hover{
+  border-color: rgb(51, 116, 161);
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.des{
+    padding: 10px;
+}
+
+.des li{
+    list-style: none;
+    line-height: 30px;
+    font-size: 17px;
+    font-family: sans-serif;
+
+}
+
+.stories span{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  padding: 10px 30px;
+  background: #f3f7fa;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* flexing images for layout 2 */
+
+.images{
+  padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.images .image{
+  border: 1px solid #eeeff0;
+  border-radius: 20px;
+  
+}
+.images .image img{
+    width: 170px;
+    height: 300px;
+    object-fit: cover;
+}
+.layout.layout2 hr{
+  border: 1px solid #f0ebeb;
+  margin: 10px 5px;
+}
+.social{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.social i{
+  opacity: 0.4;
+  font-size: 18px;
+}
+
+.social i:hover{
+  color: rgb(51, 116, 161);
+  opacity: 1;
+}
+    </style>
+</head>
+<body>
+    <header>
+      <div class="navigation">
+        <img src="others/hmm-removebg-preview.png" alt="">
+        <ul class="list">
+            <li><a href="users.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#news"><i class="fa-solid fa-users"></i> Friends</a></li>
+            <li class="dropdown">
+                <button class="dropbtn"><i class="fa fa-caret-down"></i> Categories </button>
+                <div class="dropdown-content">
+                    <a href="#">Men</a>
+                    <a href="#">Women</a>
+                    <a href="#">Children</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="third">
+          <li><a href="users.html"><i class="fa-solid fa-tags"></i></a></li>
+          <li><a href="#news"><i class="fa-solid fa-circle-info"></i></a></li>
+          <li><a href="users.html"><i class="fa-solid fa-user-plus"></i></a></li>
+          <li>
+              <div class="chin">
+                  <img src="images/pexels-andrew-personal-training-1322481.jpg" alt="Person" width="96" height="96">
+              </div>
+          </li>
+        </ul>
+
+    </div>
+
+        
+    </header>
+
+    <!-- creating dashboard with grid layouts -->
+    <section class="grid_layout">
+        <div class="layout layout1">
+          <?php
+          include_once "config.php";
+          $fname = $row['fname']; 
+          $lname = $row['lname'];
+          $profession = $row['profession'];
+
+          ?>
+          <div class="left_bar">
+            <div class="chi">
+              <img src="images/Brown-rose-gold-hair-color-for-black-women-removebg-preview.png" alt="Person" width="96" height="96">
+             <h4><strong><?php echo $fname." ".$lname ?></strong></h4>
+            </div>
+          </div>
+          <div class="left_bar">
+            <i class="fas fa-users"></i>
+            <h4><a href="friends.html">Friends</a></h4>
+          </div>
+          <div class="left_bar">
+            <i class="fas fa-user"></i>
+            <h4><a href="groups.php">Groups</a></h4>
+          </div>
+          <div class="left_bar">
+            <i class="fas fa-circle-info"></i>
+            <h4><a href="trending.php">Tending</a></h4>
+          </div>
+          <div class="left_bar">
+            <i class="fas fa-user-plus"></i>
+            <h4><a href="request.php">Request</a></h4>
+          </div>
+          <br>
+          <hr noshade width="80%" size="1px">
+          <br>
+          <br>
+          <div class="left_bar">
+            <i class="fas fa-tags"></i>
+            <h4><a href="card.php">Card-Place</a></h4>
+          </div>
+          <div class="left_bar">
+            <i class="fas fa-gear"></i>
+            <h4><a href="settings.php">Settings</a></h4>
+          </div>
+         
+        </div>
+        <div class="layout layout2">
+            <div class="lay_color">
+            
+                  </div>
+        </div>
+        <div class="layout layout4">
+          <h3>Contact</h3>
+          <div class="search">
+          <input type="text" placeholder="Search...">
+          <i class="fa fa-search"></i>
+        </div>
+          <div class="right_bar">
+           <div class="Contact">
+            <div class="chips">
+              <img src="images/Brown-rose-gold-hair-color-for-black-women-removebg-preview.png" alt="Person" width="96" height="96">
+             <span><strong>John Doe</strong></span>
+            </div>
+            <div class="chips">
+              <img src="images/girl.jpg" alt="Person" width="96" height="96">
+             <span ><strong>John Doe</strong></span>
+            </div>
+            <div class="chips">
+              <img src="images/pexels-andrew-personal-training-1322481.jpg" alt="Person" width="96" height="96">
+             <span><strong>John Doe</strong></span>
+            </div>
+            <div class="chips">
+              <img src="images/pexels-adrienne-andersen-2661255.jpg" alt="Person" width="96" height="96">
+             <span><strong>John Doe</strong></span>
+            </div>
+            <div class="chips">
+              <img src="images/istockphoto-1017932446-612x612.jpg" alt="Person" width="96" height="96">
+             <span><strong>John Doe</strong></span>
+            </div>
+            <div class="chips">
+              <img src="images/pexels-andrew-personal-training-1322481.jpg" alt="Person" width="96" height="96">
+             <span><strong>John Doe</strong></span>
+            </div>
+            
+           </div>
+          </div>
+          
+          </div>
+          <br>
+        </div>
+        </div>
+        
+    </section>
+
+    <script>
+      let sessionTimeout = 5 * 60 * 60 * 1000;
+      let timer;
+
+      function startSessionTimer(){
+        timer = setTimeout(logoutUser, sessionTimeout);
+      }
+
+      function resetSessionTimer() {
+        clearTimeout(timer);
+        timer = setTimeout(logoutUser, sessionTimeout);
+      }
+
+      function logoutUser(){
+        window.location.href = 'Login.php';
+      }
+
+      document.addEventListener('click', resetSessionTimer);
+      document.addEventListener('keydown', resetSessionTimer);
+      document.addEventListener('scroll', resetSessionTimer);
+      document.addEventListener('mousemove', resetSessionTimer);
+
+    </script>
+
+
+</body>
+</html>

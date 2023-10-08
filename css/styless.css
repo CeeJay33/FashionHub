@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #088178;
+    --panel-color: #fff;
+    --text-color: #000;
+    --black-light-color: #707070;
+    --border-color: #e6e5e5;
+    --toggle-color: #ddd;
+    --box1-color: #4d43ff;
+    --box2-color: #ffe6ac;
+    --box3-color: #e7d1fc;
+    --title-icon-color: #fff;
+
+
+
+    /* transistion */
+    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
+    --trans-03: all 0.2s ease;
+
+}
+
+body{
+    min-height: 100%;
+    background-color: var(--primary-color);
+}
+
+nav{
+    position: fixed;
+    top: 20;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    padding: 10px 14px;
+    background-color: var(--panel-color);
+    border-right: 2px solid var(--border-color);
+    transition: var(--tran-05);
+}
+
+nav.close{
+    width: 70px;
+}
+
+nav .logo-name{
+    display: flex;
+    align-items: center;
+}
+
+nav .logo-image{
+    display: flex;
+    justify-content: center;
+    min-width: 45px;
+}
+
+nav .logo-image img{
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav .logo-name .logo_name{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-left: 14px;
+    transition: var(--tran-05);
+}
+
+nav .menu-items{
+    margin-top: 40px;
+    height: calc(100% - 125px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-items .li{
+    list-style: none;
+}
+
+.menu-items .li a{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+    position: relative;
+}
+
+
+.nav-links .li a.active .link-name,
+.logout-mod .li a.active .link-name {
+    color: var(--primary-color);
+    position: relative;
+}
+
+.nav-links .li a.active .link-name:after,
+.logout-mod .li a.active .link-name:after {
+    content: "";
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: -0.1px;
+    left: 20px;
+    transition: var(--tran-05);
+}
+
+.nav-links .li a:hover .link-name,
+.logout-mod .li a:hover .link-name {
+    color: var(--primary-color);
+}
+
+/* Add this if you want the active link border to show even on hover */
+.nav-links .li a.active:hover .link-name:after,
+.logout-mod .li a.active:hover .link-name:after {
+    background: var(--primary-color);
+}
+
+
+nav.close li a .link-name{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-items .logout-mod{
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+
+.logout-mod .li a.active:hover:after,
+.logout-mod .li a:hover:hover:after{
+    content: "";
+    width: 20%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -0.1px;
+    left: 20px;
+}
+
+
+.dashboard{
+    position: relative;
+    left: 250px;
+    background-color: var(--panel-color);
+    height: 100vh;
+    width: calc(100% - 250px);
+    padding: 10px 14px;
+    transition: var(--tran-05);
+}
+
+nav.close ~ .dashboard{
+    left: 70px;
+    width: calc(100% - 70px);
+}
+
+.dashboard .top{
+    position: fixed;
+    left: 250px;
+    display: flex;
+    width: calc(100% - 250px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background-color: transparent;
+    transition: var(--tran-05);
+}
+
+nav.close ~ .dashboard .top{
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+
+.dashboard .top .sidetoggle{
+    font-size: 26px;
+    color: var(--text-color);
+    cursor: pointer;
+
+}
+
+.dashboard .top .search-box{
+    position: relative;
+    height: 45px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 30px;
+}
+
+.top .search-box input{
+    position: absolute;
+    border: 1px solid var(--border-color);
+    background-color: var(--panel-color);
+    padding: 0 25px 0 50px;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+
+}
+
+.top .search-box i{
+    position: relative;
+    left: 15px;
+    font-size: 22px;
+    left: 0;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dashboard .dash-content{
+    padding-top: 70px;
+}
+
+/* Styles for the dash-content */
+.dash-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+    background-color: #f0f0f0; /* Background color */
+}
+
+/* Styles for the addprofile container */
+.addprofile {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.addprofile:hover {
+    background-color: #f0f0f0; /* Hover background color */
+}
+
+/* Styles for the title (plus icon) */
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #333333; /* Icon color */
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #999999; /* Dashed border */
+    border-radius: 50%;
+}
+
+/* Styles for the plus icon */
+.title i {
+    font-size: 48px;
+}
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Name" id="name">
+    <button id="btn">Click</button>
+</body>
+</html>
+
+<script>
+const btn = document.getElementById('btn');
+var Nae = document.getElementById('name').value;
+const GuessNumber = 3;
+btn.addEventListener("click", () => {
+    console.log('Hello' + Nae + ' your number is ' + GuessNumber)
+})
+</script>
+
+
