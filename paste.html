@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+<?php
+include "config.php";
+
+$sql = "SELECT images.file_path, users.fname, users.lname
+        FROM images
+        INNER JOIN users ON images.user_id = users.unique_id";
+
+$all_users_data = $conn->query($sql);
+?>
+
+<?php
+while ($row = mysqli_fetch_assoc($all_users_data)) {
+?>
+    <div class="cards">
+        <div class="card" onclick="showCard(this)" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+            <img src="<?php echo $row['file_path'] ?>" alt="User Image" style="width:100%">
+            <h1><?php echo $row['fname'] . ' ' . $row['lname'] ?></h1>
+            <p class="title">CEO & Founder, Example</p>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <p><button onclick="Contact()">Contact</button></p>
+        </div>
+    </div>
+<?php
+}
+?>
 
 
 /* Notification*/

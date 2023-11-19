@@ -60,10 +60,14 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !
                 }
             }
         }
+
     } else {
         echo "Confirm Password and password does not match";
     }
 } else {
     echo "All input fields are required";
 }
+
+
+
 ?>

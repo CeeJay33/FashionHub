@@ -341,11 +341,12 @@ input[type=submit] {
     <p><input placeholder="Bags Designs..." oninput="this.className = ''" name="bag"></p>
   </div>
   <div style="overflow:auto;">
-    <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <!-- Change onclick to call a function that submits the form -->
+            <button type="button" id="nextBtn" onclick="submitForm()">Submit</button>
+        </div>
     </div>
-  </div>
   <!-- Circles which indicates the steps of the form: -->
   <div style="text-align:center;margin-top:40px;">
     <span class="step"></span>
@@ -552,45 +553,34 @@ function fixStepIndicator(n) {
             });
         });
 
-        document.getElementById("regForm").onsubmit = (event) => {
-  // Prevent the default form submission
-  event.preventDefault();
+    function submitForm() {
+    var formData = new FormData(document.getElementById("regForm")); // Get form data
 
-  // Create a FormData object to serialize the form data
-  let formData = new FormData(document.getElementById("regForm"));
+    var xhr = new XMLHttpRequest(); // Create XMLHttpRequest object
 
-  // Create an XMLHttpRequest object
-  let xhr = new XMLHttpRequest();
+    xhr.open('POST', 'Intropro.php', true); // Configure the request
 
-  // Configure the request
-  xhr.open('POST', 'Intropro.php', true);
-
-  // Set up a callback function to handle the response
-  xhr.onload = () => {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-      if (xhr.status === 200) {
-        let data = xhr.response;
-        if (data === 'success') {
-          location.href = 'dashboardP.html';
-        } else {
-          // Handle other response data or errors
-          console.log('Server returned:', data);
+    xhr.onreadystatechange = function() { // Define a function to handle the response
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let data = xhr.response;
+                if (data === 'success') {
+                    location.href = 'dashboardP.html'; // Redirect upon successful submission
+                } else {
+                    console.log('Server returned:', data);
+                }
+            } else {
+                console.error('Request failed with status:', xhr.status);
+            }
         }
-      } else {
-        // Handle HTTP errors here
-        console.error('Request failed with status:', xhr.status);
-      }
-    }
-  };
+    };
 
-  // Handle network errors
-  xhr.onerror = () => {
-    console.error('Network error occurred');
-  };
+    xhr.onerror = function() { // Handle network errors
+        console.error('Network error occurred');
+    };
 
-  // Send the form data in the request
-  xhr.send(formData);
-};
+    xhr.send(formData); // Send the form data to the PHP script
+}
 
     </script>
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -1,5 +1,5 @@
- <!-- <?php
-    <!-- session_start();
+  <?php
+    session_start();
     include "config.php";
     $unique_id = $_SESSION['unique_id'];
     if(empty($unique_id)){
@@ -14,7 +14,9 @@
             header("Location: verifyD.php");
             }
         }
-    } -->
+    } 
+
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -525,23 +527,22 @@ button:hover, a:hover {
 
               <div class="info">
                 <ul>
-                  <li><strong>Adeyumi Arike</strong> <i class="fa fa-pencil"></i></li>
+                <?php
+          include "config.php";
+              $fname = $row['fname']; 
+              $lname = $row['lname'];
+
+          ?>
+                  <li><strong><?php echo $fname. ' '.$lname ?></strong> <i class="fa fa-pencil"></i></li>
                   <li>5 years of experience  Arike <i class="fa fa-pencil"></i></li>
                   <li>+234 8022619320 <i class="fa fa-pencil"></i></li>
                   <li>Unity avenue street <i class="fa fa-pencil"></i></li>
                   <li>I Design bags, shoes, and wears for wedding and all <i class="fa fa-pencil"></i></li>
                 </ul>
-                <div class="follow">
-                  <div class="following">
-                    <button class="btn1">Following</button>
-                  </div>
-                  <div class="followers">
-                    <button class="btn2">Followers</button>
-                  </div>
                 </div>
 
 
-                <div class="card1" onclick="showCard(this)">
+                <!-- <div class="card1" onclick="showCard(this)">
                   <div class="imgg">
                     <img src="img/agidi.png" alt="">
                   </div>
@@ -550,75 +551,21 @@ button:hover, a:hover {
                   
                   <p><button onclick="Contact()">Upload</button></p>
                 </div>
+ -->
 
-
-                <div class="short_info">
-                  <ul>
-                    <li style="font-style: italic;"><strong>on the Icon above to add a picture you want to display in card</strong> </li>
-                    <li  style="font-style: italic;">Pictures displayed on Cards are easily viewed by customers</li>
-                  </ul>
-                </div>
-
-                
-                </div>
-                <div class="boss">
-                  <div class="short_info">
-                    <ul>
-                      <li  style="font-style: italic;">Add five(6) images of your designs below Once done kindly upload!</li>
-                      <li  style="font-style: italic;">You can delete Uploads when uplaoded</li>
-                    <li  style="font-style: italic;">Your uploaded images will be saved in the image box </li>
-
-                    </ul>
-                  </div>
+              
                   <div class="flex">
                     <div class="image-container">
-                      <label for="file-input-1" class="camera-icon"><i class="fas fa-camera"></i></label>
-                      <input type="file" id="file-input-1" class="upload-button" accept="image/*">
-                      <img id="selected-image-1" src="" alt="" style="">
-                      <button style="background-color: #000; color: #fff; width: 50%; border-radius: 10px;" disabled>Upload</button>
-                      <i class="fas fa-trash trash-icon" id="delete-image-1"></i>
+                      <input type="file" id="file-input-1" accept="image/*" onchange="handleFileChange('file-input-1')">
+                      <img id="selected-image-1" src="" alt="Selected Image">
+                      <button onclick="deleteImage('file-input-1')" style="margin-top: 20px;">Delete</button>
                     </div>
+                  
+                    <!-- Repeat the above image container for multiple images if needed -->
+                  
+                    <button onclick="uploadToDatabase()">Upload to Database</button>
                 
-                    <!-- Repeat the following structure for 6 more image containers -->
-                    <div class="image-container">
-                      <label for="file-input-2" class="camera-icon"><i class="fas fa-camera"></i></label>
-                      <input type="file" id="file-input-2" class="upload-button" accept="image/*">
-                      <img id="selected-image-2" src="" alt="" style="">
-                      <button style="background-color: #000; color: #fff; width: 50%; border-radius: 10px;" disabled>Upload</button>
-                      <i class="fas fa-trash trash-icon" id="delete-image-2"></i>
-                    </div>
-                
-                    <div class="image-container">
-                      <label for="file-input-3" class="camera-icon"><i class="fas fa-camera"></i></label>
-                      <input type="file" id="file-input-3" class="upload-button" accept="image/*">
-                      <img id="selected-image-3" src="" alt="" style="">
-                      <button style="background-color: #000; color: #fff; width: 50%; border-radius: 10px;" disabled>Upload</button>
-                      <i class="fas fa-trash trash-icon" id="delete-image-3"></i>
-                    </div>
-                
-                    <div class="image-container">
-                      <label for="file-input-4" class="camera-icon"><i class="fas fa-camera"></i></label>
-                      <input type="file" id="file-input-4" class="upload-button" accept="image/*">
-                      <img id="selected-image-4" src="" alt="" style="">
-                      <button style="background-color: #000; color: #fff; width: 50%; border-radius: 10px;" disabled>Upload</button>
-                      <i class="fas fa-trash trash-icon" id="delete-image-4"></i>
-                    </div>
-                
-                    <div class="image-container">
-                      <label for="file-input-5" class="camera-icon"><i class="fas fa-camera"></i></label>
-                      <input type="file" id="file-input-5" class="upload-button" accept="image/*">
-                      <img id="selected-image-5" src="" alt="" style="">
-                      <button style="background-color: #000; color: #fff; width: 50%; border-radius: 10px;" disabled>Upload</button>
-                      <i class="fas fa-trash trash-icon" id="delete-image-5"></i>
-                    </div>
-                
-                    <div class="image-container">
-                      <label for="file-input-6" class="camera-icon"><i class="fas fa-camera"></i></label>
-                      <input type="file" id="file-input-6" class="upload-button" accept="image/*">
-                      <img id="selected-image-6" src="" alt="" style="">
-                      <button style="background-color: #000; color: #fff; width: 50%; border-radius: 10px;" disabled>Upload</button>
-                      <i class="fas fa-trash trash-icon" id="delete-image-6"></i>
-                    </div>
+                   
               </div>
         </div>
         </div>
@@ -627,8 +574,9 @@ button:hover, a:hover {
 
 
     <!-- Script to handle image selection and deletion -->
-<script>
- function updateImage(inputId, imageId, deleteId) {
+    <script>
+
+function updateImage(inputId, imageId, deleteId) {
       const input = document.getElementById(inputId);
       const image = document.getElementById(imageId);
       const deleteButton = document.getElementById(deleteId);
@@ -662,6 +610,47 @@ button:hover, a:hover {
     updateImage('file-input-4', 'selected-image-4', 'delete-image-4');
     updateImage('file-input-5', 'selected-image-5', 'delete-image-5');
     updateImage('file-input-6', 'selected-image-6', 'delete-image-6');
-</script>
+      function uploadImage(fileInputId) {
+        const fileInput = document.getElementById(fileInputId);
+        const file = fileInput.files[0];
+        const formData = new FormData();
+        formData.append('image', file);
+  
+        return fetch('uploads.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => {
+          if (response.ok) {
+            return response.text();
+          } else {
+            throw new Error('Image upload failed');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          return null;
+        });
+      }
+  
+      function handleFileChange(inputId) {
+        uploadImage(inputId)
+          .then(response => {
+            if (response !== null) {
+              console.log('Image uploaded successfully:', response);
+              // Handle success if needed
+            } else {
+              console.error('Image upload failed');
+              // Handle error if needed
+            }
+          });
+      }
+  
+      function uploadToDatabase() {
+        uploadImage('file-input-1');
+        // Upload other images similarly
+        // Additional actions after uploading to the database can be performed here
+      }
+    </script>
 </body>
 </html>

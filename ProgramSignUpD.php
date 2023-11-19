@@ -51,6 +51,8 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !
                         $row = mysqli_fetch_assoc($sql3);
                         $_SESSION['unique_id'] = $row['unique_id'];
                         $_SESSION['otp'] = $row['otp'];
+                        $_SESSION['fname'] = $row['fname'];
+                        $_SESSION['lname'] = $row['lname'];
                         echo "success";
                     } else {
                         echo "Something went wrong";

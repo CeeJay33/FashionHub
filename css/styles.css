@@ -23,11 +23,12 @@ body{
 
 .form{
     position: relative;
-    background: #f2f3f7;
+    background: #fff;
     width: 100%;
     max-width: 600px;
     border-radius: 12px;
     padding: 30px 30px;
+    margin: auto;
 }
 
 .form h2{
@@ -205,7 +206,7 @@ form input[type="file"]{
     border: none;
     color: #f2f3f7;
     width: 100%;
-    background:  #000;
+    background:  #16488a;
     font-size: 17px;
     border-radius: 20px;
     cursor: pointer;
@@ -230,4 +231,44 @@ form input[type="file"]{
 
 .Forgot a{
     text-decoration: none;
+}
+
+
+.fields-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.otp_fields{
+    border-radius: 5px;
+    font-size: 60px;
+    height: 100px;
+    width: 100px;
+    border: 3px solid #cacaca;
+    margin: 1%;
+    text-align: center;
+    font-weight: 600;
+    outline: none;
+}
+
+.otp_fields::-webkit-inner-spin-button,
+.otp_fields::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.otp_fields:valid{
+    border-color: #3085d8;
+    box-shadow: 0 10px 10px -5px rgba(0,0,0,0.25);
+}
+
+@media only screen and (max-width: 455px){
+    .otp_fields{
+        font-size: 55px;
+        height: 80px;
+        width: 80px;
+}
+
 }

@@ -1,11 +1,10 @@
-<?php
-include_once "config.php";
+]<?php
 session_start();
 
 // Turn off error reporting and displaying errors
 error_reporting(0);
 ini_set('display_errors', 0);
-
+include_once "config.php";
 // Get the OTP values and unique ID from the form and session
 $otp1 = $_POST['otp1'];
 $otp2 = $_POST['otp2'];
@@ -30,10 +29,12 @@ if (!empty($otp)) {
                     $_SESSION['unique_id'] = $row['unique_id'];
                     $_SESSION['verification_status'] = $row['verification_status'];
                     echo "Success";
+
+                    
                 }
-                
+               
             }
-            
+
         }
         else {
             echo "Invalid OTP";

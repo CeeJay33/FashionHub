@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +40,6 @@
 
   <script charset="utf-8" src="/assets/packs/js/137.c197274b0822f6122417.js"></script><meta http-equiv="origin-trial" content="A+N5HpM5gDAUeupaWw3J2yuMrpgH0IC7KtFHAqtmHkW8Vr+dPpJWuOpMNIRh3ybxyoIUKlvDQs7+VGPfYdQ/qQUAAABxeyJvcmlnaW4iOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkZlZENtQXV0b1JlYXV0aG4iLCJleHBpcnkiOjE2OTE1MzkxOTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><link id="googleidentityservice" type="text/css" media="all" rel="stylesheet" href="https://accounts.google.com/gsi/style"><style id="googleidentityservice_button_styles">.qJTHM{-webkit-user-select:none;color:#202124;direction:ltr;-webkit-touch-callout:none;font-family:"Roboto-Regular",arial,sans-serif;-webkit-font-smoothing:antialiased;font-weight:400;margin:0;overflow:hidden;-webkit-text-size-adjust:100%}.ynRLnc{left:-9999px;position:absolute;top:-9999px}.L6cTce{display:none}.bltWBb{word-break:break-all}.hSRGPd{color:#1a73e8;cursor:pointer;font-weight:500;text-decoration:none}.Bz112c-W3lGp{height:16px;width:16px}.Bz112c-E3DyYd{height:20px;width:20px}.Bz112c-r9oPif{height:24px;width:24px}.Bz112c-uaxL4e{-webkit-border-radius:10px;border-radius:10px}.LgbsSe-Bz112c{display:block}.S9gUrf-YoZ4jf,.S9gUrf-YoZ4jf *{border:none;margin:0;padding:0}.fFW7wc-ibnC6b>.aZ2wEe>div{border-color:#4285f4}.P1ekSe-ZMv3u>div:nth-child(1){background-color:#1a73e8!important}.P1ekSe-ZMv3u>div:nth-child(2),.P1ekSe-ZMv3u>div:nth-child(3){background-image:linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,#1a73e8,#1a73e8)!important}.haAclf{display:inline-block}.nsm7Bb-HzV7m-LgbsSe{-webkit-border-radius:4px;border-radius:4px;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:background-color .218s,border-color .218s;transition:background-color .218s,border-color .218s;-webkit-user-select:none;-webkit-appearance:none;background-color:#fff;background-image:none;border:1px solid #dadce0;color:#3c4043;cursor:pointer;font-family:"Google Sans",arial,sans-serif;font-size:14px;height:40px;letter-spacing:0.25px;outline:none;overflow:hidden;padding:0 12px;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}@media screen and (-ms-high-contrast:active){.nsm7Bb-HzV7m-LgbsSe{border:2px solid windowText;color:windowText}}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe{font-size:14px;height:32px;letter-spacing:0.25px;padding:0 10px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe{font-size:11px;height:20px;letter-spacing:0.3px;padding:0 8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe{padding:0;width:40px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe{width:32px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe{width:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK{-webkit-border-radius:20px;border-radius:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe{-webkit-border-radius:16px;border-radius:16px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe{-webkit-border-radius:10px;border-radius:10px}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc{border:none;color:#fff}.nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc{background-color:#1a73e8}.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{background-color:#202124;color:#e8eaed}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:18px;margin-right:8px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:14px;min-width:14px;width:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:10px;min-width:10px;width:10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin-left:8px;margin-right:-4px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:10px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:4px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-top-left-radius:3px;border-top-left-radius:3px;-webkit-border-bottom-left-radius:3px;border-bottom-left-radius:3px;display:-webkit-box;display:-webkit-flex;display:flex;justify-content:center;-webkit-align-items:center;align-items:center;background-color:#fff;height:36px;margin-left:-10px;margin-right:12px;min-width:36px;width:36px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:28px;margin-left:-8px;margin-right:10px;min-width:28px;width:28px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:16px;margin-left:-6px;margin-right:8px;min-width:16px;width:16px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-radius:3px;border-radius:3px;margin-left:2px;margin-right:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-radius:18px;border-radius:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-radius:14px;border-radius:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-radius:8px;border-radius:8px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-flex-direction:row;flex-direction:row;justify-content:space-between;-webkit-flex-wrap:nowrap;flex-wrap:nowrap;height:100%;position:relative;width:100%}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX{justify-content:center}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:1;flex-grow:1;font-family:"Google Sans",arial,sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis;vertical-align:top}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-weight:300}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:0;flex-grow:0}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe{-webkit-transition:background-color .218s;transition:background-color .218s;bottom:0;left:0;position:absolute;right:0;top:0}.nsm7Bb-HzV7m-LgbsSe:hover,.nsm7Bb-HzV7m-LgbsSe:focus{-webkit-box-shadow:none;box-shadow:none;border-color:#d2e3fc;outline:none}.nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.04)}.nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.1)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.24)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.32)}.nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY{-webkit-border-radius:50%;border-radius:50%;display:-webkit-box;display:-webkit-flex;display:flex;height:20px;margin-left:-4px;margin-right:8px;min-width:20px;width:20px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-family:"Roboto";font-size:12px;text-align:left}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf,.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS{overflow:hidden;text-overflow:ellipsis}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;color:#5f6368;fill:#5f6368;font-size:11px;font-weight:400}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#e8eaed;fill:#e8eaed}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c{height:18px;margin:-3px -3px -3px 2px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-top-left-radius:0;border-top-left-radius:0;-webkit-border-bottom-left-radius:0;border-bottom-left-radius:0;-webkit-border-top-right-radius:3px;border-top-right-radius:3px;-webkit-border-bottom-right-radius:3px;border-bottom-right-radius:3px;margin-left:12px;margin-right:-10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-radius:18px;border-radius:18px}.L5Fo6c-sM5MNb{border:0;display:block;left:0;position:relative;top:0}.L5Fo6c-bF1uUb{-webkit-border-radius:4px;border-radius:4px;bottom:0;cursor:pointer;left:0;position:absolute;right:0;top:0}.L5Fo6c-bF1uUb:focus{border:none;outline:none}sentinel{}</style><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/787470371/?random=1693867293572&amp;cv=11&amp;fst=1693867293572&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be38u0&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fdribbble.com%2F&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Dribbble%20-%20Discover%20the%20World%E2%80%99s%20Top%20Designers%20%26%20Creative%20Professionals&amp;auid=880183782.1693867294&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B116.0.5845.141%7CNot)A%253BBrand%3B24.0.0.0%7CGoogle%2520Chrome%3B116.0.5845.141&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script></head>
 <style>
-
 
     .navigation{
     display: flex;
@@ -489,8 +490,9 @@ hr {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    align-items: center;
     padding: 20px 0;
-    margin-bottom: 70px;
+    margin: 70px 0;
 }
 
 
@@ -509,9 +511,18 @@ hr {
   object-fit: cover;
 }
 
+.card h1{
+  font-size: 30px;
+}
+
 .card .title {
   color: grey;
   font-size: 18px;
+}
+
+
+.card i{
+  color: gold;
 }
 
 .card button {
@@ -798,7 +809,6 @@ button:hover, a:hover {
 
                 <ul class="list">
                     <li><a href="">Home</a></li>
-                    <li><a href="">Travel</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
@@ -851,444 +861,41 @@ button:hover, a:hover {
               <a class="margin-t-32 btn2 btn2--large" data-track-cta="Start hiring" href="/signup/new?return_to_after_signup=%2Fget-started%3Fintention%3Dhire%23hiringWorkType">Start hiring today</a>
             </div>
           
-            <div class="hero-marquee" style="--card-count: 24;">
-              <div class="hero-marquee__track">
-                <div class="hero-marquee__grid">
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.6902645171230751s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Andrea Jelić</div>
-                        <div div="" class="hero-marquee-item__title">Digital Designer</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Brand</li>
-                            <li class="hero-marquee-item__tag">UI</li>
-                            <li class="hero-marquee-item__tag">Web</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);">
-                          <img alt="Andrea Jelić" width="273" src="images/e22e56a97e1129969303c844cb1daa08.jpg" height="340" class="lazypreload lazyautosizes lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" >
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.1208736496419971s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Helen Tran</div>
-                        <div div="" class="hero-marquee-item__title">Lead Product Designer</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Leadership</li>
-                            <li class="hero-marquee-item__tag">Product</li>
-                            <li class="hero-marquee-item__tag">UX</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media"style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);">
-                        <img alt="Andrea Jelić" width="273" src="images/pexels-adrienne-andersen-2661255.jpg" height="340" class="lazypreload lazyautosizes lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" >
-                         </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.38083371311522407s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Elif Kameşoğlu</div>
-                        <div div="" class="hero-marquee-item__title">Brand Designer</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Brand</li>
-                            <li class="hero-marquee-item__tag">Illustration</li>
-                            <li class="hero-marquee-item__tag">Web</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media"style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);">
-                          <img alt="Elif Kameşoğlu" width="273" src="images/girl.jpg" height="340" class="lazypreload lazyautosizes lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" >
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.14511244829528158s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Chris Owens</div>
-                        <div div="" class="hero-marquee-item__title">Creative Director</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Illustration</li>
-                            <li class="hero-marquee-item__tag">Mobile</li>
-                            <li class="hero-marquee-item__tag">UI</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);">
-                          <img alt="Chris Owens" width="273" src="images/istockphoto-1017932446-612x612.jpg" height="340" class="lazypreload lazyautosizes lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.8920494883312011s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Daniele Buffa</div>
-                        <div div="" class="hero-marquee-item__title">Principal Designer</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Animation</li>
-                            <li class="hero-marquee-item__tag">UI</li>
-                            <li class="hero-marquee-item__tag">Visual</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);">
-                          <img alt="Daniele Buffa" width="273" src="images/handsome-black-man-blue-polo-9mr9n48skon1tp1c.jpg" height="340" class="lazypreload lazyautosizes lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.2716015259239114s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Mercedes Bazan</div>
-                        <div div="" class="hero-marquee-item__title">Illustrator</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Graphic Design</li>
-                            <li class="hero-marquee-item__tag">Illustration</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);">
-                          <img alt="Mercedes Bazan" width="273" src="images/1975d6e34c2e992995b1288bd546799a--handsome-black-men-black-man.jpg" height="340" class="lazypreload lazyautosizes lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.9735549342494151s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Vladimir Gruev</div>
-                        <div div="" class="hero-marquee-item__title">Digital Designer</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Brand</li>
-                            <li class="hero-marquee-item__tag">Design</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);">
-                          <img alt="Vladimir Gruev" width="273" src="images/4ee7891769beddd161000022.jpg" height="340" class="lazypreload lazyautosizes lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.473525903888228s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Aurélien Salomon</div>
-                        <div div="" class="hero-marquee-item__title">Design Director</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Mobile</li>
-                            <li class="hero-marquee-item__tag">Product</li>
-                            <li class="hero-marquee-item__tag">UX</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);">
-                          <img alt="Aurélien Salomon" width="273" src="images/TOD09516.jpg" height="340" class="lazypreload lazyautosizes lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.23080989686392117s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Lilla Bardenova</div>
-                        <div div="" class="hero-marquee-item__title">Brand + Illustrator</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Brand</li>
-                            <li class="hero-marquee-item__tag">Illustration</li>
-                            <li class="hero-marquee-item__tag">Web</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <img alt="Lilla Bardenova" src="images/Brown-rose-gold-hair-color-for-black-women-removebg-preview.png" width="273" height="340" class="lazypreload lazyautosizes lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.6162092255224532s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Jesse Showalter</div>
-                        <div div="" class="hero-marquee-item__title">Design Educator</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">UI</li>
-                            <li class="hero-marquee-item__tag">Web</li>
-                            <li class="hero-marquee-item__tag">Mobile</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                        <img alt="Lilla Bardenova" src="images/istockphoto-1017932446-612x612.jpg" width="273" height="340" class="lazypreload lazyautosizes lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="">
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.40423332585736793s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Dan Mall</div>
-                        <div div="" class="hero-marquee-item__title">Design Educator</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Product</li>
-                            <li class="hero-marquee-item__tag">UX</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                        <img alt="Lilla Bardenova" src="images/photo-1522529599102-193c0d76b5b6.jpeg" width="273" height="340" class="lazypreload lazyautosizes lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="">
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.25403174251081195s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Victa Wille</div>
-                        <div div="" class="hero-marquee-item__title">Digital Designer</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Mobile</li>
-                            <li class="hero-marquee-item__tag">UI</li>
-                            <li class="hero-marquee-item__tag">Web</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <img alt="Victa Wille" src="images/maxresdefault-removebg-preview.png" width="273" height="340" class="lazypreload lazyautosizes lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.27620064365441144s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Andrea Jelić</div>
-                        <div div="" class="hero-marquee-item__title">Digital Designer</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Brand</li>
-                            <li class="hero-marquee-item__tag">UI</li>
-                            <li class="hero-marquee-item__tag">Web</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <img alt="Andrea Jelić" src="images/short-curly-hair-for-black-men.jpg" width="273" height="340" class="lazypreload lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.7119863943098662s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Helen Tran</div>
-                        <div div="" class="hero-marquee-item__title">Lead Product Designer</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Leadership</li>
-                            <li class="hero-marquee-item__tag">Product</li>
-                            <li class="hero-marquee-item__tag">UX</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <video width="273" height="340" playsinline="" class="lazypreload lazyloaded " data-autoplay="" preload="auto" loop="" muted="" src="https://cdn.dribbble.com/uploads/47181/original/1e3a73a174484bef522b620c401cd00a.mp4?1685645427" data-expand="-10">
-                      </video></div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.6281323085130354s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Elif Kameşoğlu</div>
-                        <div div="" class="hero-marquee-item__title">Brand Designer</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Brand</li>
-                            <li class="hero-marquee-item__tag">Illustration</li>
-                            <li class="hero-marquee-item__tag">Web</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <img alt="Elif Kameşoğlu" width="273" height="340" class="lazypreload lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w" sizes="218px" srcset="https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47176/original/9b22cd83bde1809976bec0722d1f8923.jpeg?1685645213&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.546889997335732s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Chris Owens</div>
-                        <div div="" class="hero-marquee-item__title">Creative Director</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Illustration</li>
-                            <li class="hero-marquee-item__tag">Mobile</li>
-                            <li class="hero-marquee-item__tag">UI</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <img alt="Chris Owens" width="273" src="/images/pexels-adrienne-andersen-2661255.jpg" height="340" class="lazypreload lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w" sizes="218px" srcset="https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47177/original/3986915be548424a5d36657f2b034ead.jpeg?1685645250&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.8378212307156881s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Daniele Buffa</div>
-                        <div div="" class="hero-marquee-item__title">Principal Designer</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Animation</li>
-                            <li class="hero-marquee-item__tag">UI</li>
-                            <li class="hero-marquee-item__tag">Visual</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <img alt="Daniele Buffa" width="273" src="images/pexels-adrienne-andersen-2661255.jpg" height="340" class="lazypreload lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w" sizes="218px" srcset="https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.7543753338682897s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Mercedes Bazan</div>
-                        <div div="" class="hero-marquee-item__title">Illustrator</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Graphic Design</li>
-                            <li class="hero-marquee-item__tag">Illustration</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <img alt="Mercedes Bazan" width="273" src="images/pexels-andrew-personal-training-1322481.jpg" height="340" class="lazypreload lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w" sizes="218px" srcset="https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47178/original/mercedes-bazan.png?1689174566&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.6848936116649855s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Vladimir Gruev</div>
-                        <div div="" class="hero-marquee-item__title">Digital Designer</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Brand</li>
-                            <li class="hero-marquee-item__tag">Design</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <img alt="Vladimir Gruev" width="273" src="images/girl.jpg" height="340" class="lazypreload lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w" sizes="218px" srcset="https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47173/original/Vladimir_Gruev.png?1689174896&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.7927346120420175s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Aurélien Salomon</div>
-                        <div div="" class="hero-marquee-item__title">Design Director</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Mobile</li>
-                            <li class="hero-marquee-item__tag">Product</li>
-                            <li class="hero-marquee-item__tag">UX</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <img alt="Aurélien Salomon" width="273" height="340" class="lazypreload lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w" sizes="218px" srcset="https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47170/original/cd3266dde4f00a5d6a509c7375ddaecd.png?1685644840&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.9098358782707082s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Lilla Bardenova</div>
-                        <div div="" class="hero-marquee-item__title">Brand + Illustrator</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Brand</li>
-                            <li class="hero-marquee-item__tag">Illustration</li>
-                            <li class="hero-marquee-item__tag">Web</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <img alt="Lilla Bardenova" width="273" height="340" class="lazypreload lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" data-aspectratio="0.8029411764705883" data-srcset="https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w" sizes="218px" srcset="https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=320x399&amp;vertical=center 320w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=400x498&amp;vertical=center 400w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=640x797&amp;vertical=center 640w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=752x937&amp;vertical=center 752w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=1024x1275&amp;vertical=center 1024w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=1200x1495&amp;vertical=center 1200w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=1504x1873&amp;vertical=center 1504w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=2048x2551&amp;vertical=center 2048w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=273x340&amp;vertical=center 273w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=546x680&amp;vertical=center 546w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=574x715&amp;vertical=center 574w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&amp;format=webp&amp;resize=1148x1430&amp;vertical=center 1148w">
-                      </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.32919653017015194s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Jesse Showalter</div>
-                        <div div="" class="hero-marquee-item__title">Design Educator</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">UI</li>
-                            <li class="hero-marquee-item__tag">Web</li>
-                            <li class="hero-marquee-item__tag">Mobile</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <video width="273" height="340" playsinline="" class="lazypreload lazyloaded " data-autoplay="" preload="auto" loop="" muted="" src="https://cdn.dribbble.com/uploads/47180/original/1def7b9fb30832c4af4353b325d9c3af.mp4?1685645402" data-expand="-10">
-                      </video></div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.36417420719471727s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Dan Mall</div>
-                        <div div="" class="hero-marquee-item__title">Design Educator</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Product</li>
-                            <li class="hero-marquee-item__tag">UX</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                        <img src="" alt="">
-                          </div>
-                    </div>
-                    <div class="hero-marquee-item lazyloaded" data-lazy-parent="" style="--reveal-delay: 0.7309084907102845s;">
-                      <div div="" class="hero-marquee-item__info">
-                        <div div="" class="hero-marquee-item__name">Victa Wille</div>
-                        <div div="" class="hero-marquee-item__title">Digital Designer</div>
-          
-                        <ul class="hero-marquee-item__tags">
-                            <li class="hero-marquee-item__tag">Mobile</li>
-                            <li class="hero-marquee-item__tag">UI</li>
-                            <li class="hero-marquee-item__tag">Web</li>
-                        </ul>
-                      </div>
-          
-                      <div div="" class="hero-marquee-item__media">
-                          <img alt="Victa Wille" width="273" src="images/pexels-adrienne-andersen-2661255.jpg" height="340" class="lazypreload lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" >
-                      </div>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          </section>
-
+           
             <!-- for trending designers -->
 
+        <div class="cards">
 
-          <!-- Meeting active designers -->
-          <div class="tailor">
-            <div class="hype" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
-              <h2 style="color: #000;">Active Designers Ready to Customize a Brand for you!!</h2>
-              <button class="btn3">Find Customers </button>
-            </div>
-          </div>
+        <?php
+include "config.php";
 
-          <div class="cards">
-            <div class="card" onclick="showCard(this)"  data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-              <img src="clothes/images (2).jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
+$sql = "SELECT DISTINCT images.user_id, images.file_path, userd.fname, userd.lname
+        FROM images
+        INNER JOIN userd ON images.user_id = userd.unique_id";
+
+$unique_users_data = $conn->query($sql);
+$unique_user_ids = array();
+
+while ($row = mysqli_fetch_assoc($unique_users_data)) {
+    if (!in_array($row['user_id'], $unique_user_ids)) {
+        $unique_user_ids[] = $row['user_id'];
+?>
+            <div class="card" onclick="showCard(this)" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <img src="<?php echo $row['file_path'] ?>" alt="User Image" style="width:100%">
+                <h1><?php echo $row['fname'] . ' ' . $row['lname'] ?></h1>
+                <p class="title">CEO & Founder, Example</p>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <p><button onclick="Contact()">Contact</button></p>
             </div>
-          
-            <div class="card" onclick="showCard(this)" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
-              <img src="clothes/asoebiguest.com-latest-nigeria-lace-styles-and-designs-you-should-see-79f8d255-b6cf-4e60-859b-6ee75d5ee452-461x600.jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
-          
-            <div class="card" onclick="showCard(this)"  data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
-              <img src="clothes/asoebi-Asoebi-@solesfashion-amillionstyles.webp" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
-          
-            <div class="card" onclick="showCard(this)"  data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
-              <img src="clothes/Ankara-Jumpsuit-Styles-43.jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
-          
-          </div>
+            <?php
+    }
+}
+?>
+
+        </div>
           
 
           <section class="trend">
