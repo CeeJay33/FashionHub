@@ -1,17 +1,17 @@
 <?php
     session_start();
     include "config.php";
-   $unique_id = $_SESSION['unique_id'];
+   $unique_id = $_SESSION['uniqued'];
     if (empty($unique_id)) {
-        header("Location: Login.php");
+        header("Location: LoginD.php");
     }
-    $qry = mysqli_query($conn, "SELECT * FROM userd WHERE unique_id = '{$unique_id}'");
+    $qry = mysqli_query($conn, "SELECT * FROM userd WHERE uniqued = '{$unique_id}'");
     if (mysqli_num_rows($qry) > 0) {
         $row = mysqli_fetch_assoc($qry);
         if ($row) {
             $_SESSION['verification_status'] = $row['verification_status'];
             if ($row['verification_status'] == 'verified') {
-                header("Location: dashboardp.html");
+                header("Location: dashboardp.php");
             }
         }
     }
@@ -330,9 +330,9 @@ form input[type="file"]{
             Button = form.querySelector('.submit input');
         errorText = document.querySelector('.error-text');
 
-                        Button.onclick = (e) => {
-                    e.preventDefault(); 
-                };
+                //         Button.onclick = (e) => {
+                //     e.preventDefault(); 
+                // };
 
 
             Button.onclick = () => {
@@ -343,7 +343,7 @@ form input[type="file"]{
                         if (xhr.status === 200) {
                             let data = xhr.response.trim();
                     if (data === "success") {
-                        location.href = 'dashboardp.html';
+                        location.href = 'dashboardp.php';
                     } else {
                         errorText.textContent = data;
                         errorText.style.display = 'block';

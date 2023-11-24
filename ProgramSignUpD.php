@@ -15,10 +15,14 @@ $lname = mysqli_real_escape_string($conn, $_POST['lname']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
 $Cpassword = mysqli_real_escape_string($conn, $_POST['cpassword']);
+$Experience = mysqli_real_escape_string($conn, $_POST['Experience']);
+$Phone = mysqli_real_escape_string($conn, $_POST['Phone']);
+$Category = mysqli_real_escape_string($conn, $_POST['Category']);
+$Address = mysqli_real_escape_string($conn, $_POST['Address']);
 $Check = mysqli_real_escape_string($conn, $_POST['check']);
 $Verification_status = '0';
 
-if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !empty($Cpassword) && !empty($Check)) {
+if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !empty($Cpassword) && !empty($Check) && !empty($Experience) && !empty($Phone) && !empty($Category) && !empty($Address)) {
     if ($password == $Cpassword) {
         $sql = mysqli_query($conn, "SELECT email FROM userd WHERE email = '{$email}'");
         if (mysqli_num_rows($sql) > 0) {
@@ -26,7 +30,7 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !
         } else {
             $rand_id = rand(time(), 10000000);
             $otp = mt_rand(1111, 9999);
-            $sql2 = mysqli_query($conn, "INSERT INTO userd (unique_id, fname, lname, email, password, otp) VALUES ({$rand_id}, '{$fname}', '{$lname}', '{$email}', '{$password}', '{$otp}')");
+            $sql2 = mysqli_query($conn, "INSERT INTO userd (uniqued, fname, lname, email, password, otp, experience, phone_number, category, address) VALUES ({$rand_id}, '{$fname}', '{$lname}', '{$email}', '{$password}', '{$otp}', '{$Experience}', '{$Phone}', '{$Category}', '{$Address}')");
             if ($sql2) {
                 
                 $mail = new PHPMailer(true);
@@ -49,7 +53,7 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !
                     $sql3 = mysqli_query($conn, "SELECT * FROM userd WHERE email = '{$email}'");
                     if (mysqli_num_rows($sql3) > 0) {
                         $row = mysqli_fetch_assoc($sql3);
-                        $_SESSION['unique_id'] = $row['unique_id'];
+                        $_SESSION['uniqued'] = $row['uniqued'];
                         $_SESSION['otp'] = $row['otp'];
                         $_SESSION['fname'] = $row['fname'];
                         $_SESSION['lname'] = $row['lname'];

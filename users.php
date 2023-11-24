@@ -455,7 +455,13 @@
   align-items: center;
   justify-content: space-around;
 }
-
+.social a{
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
 .social i{
   opacity: 0.9;
   font-size: 18px;
@@ -477,7 +483,6 @@
 
 .oga{
   text-align: center;
-  width: 100%;
     text-align: center;
     height: 380px;
     background-color: #fff;
@@ -706,7 +711,7 @@ button:hover, a:hover {
                 <span class="badge">5</span>
             </a>
         </li>
-        <li><a href="#news" title="Contact"><i class="fa-solid fa-phone"></i></a></li>
+        <li><a href="contactus.html" title="Contact"><i class="fa-solid fa-phone"></i></a></li>
         <li class="dropdown" title="About">
             <button class="dropbtn"><i class="fa-solid fa-circle-info"></i></button>
             <div class="dropdown-content"></div>
@@ -742,7 +747,7 @@ button:hover, a:hover {
     <section class="grid_layout">
         <div class="layout layout1">
           <?php
-          include_once "config.php";
+          include "config.php";
           $fname = $row['fname']; 
           $lname = $row['lname'];
 
@@ -784,384 +789,33 @@ button:hover, a:hover {
          
         </div>
         <div class="layout layout2">
-            <div class="lay_color">
-            <div class="chip">
-                <img src="images/Brown-rose-gold-hair-color-for-black-women-removebg-preview.png" loading="lazy" width="96" height="96">
-               <span style="opacity: 0.7;"><strong>Zoe Wilson, Posted</strong></span>
-              </div>
-              <div class="stories">
-                <ul class="des">
-                    <li><strong>Category:</strong> Fashion Designer, clothes, shoes, hoodies.</li>
-                    <li><strong>Experience:</strong> 5 years</li>
-                    
-                </ul>
-                <div class="images">
-                  <div class="image">
-                  <img src="clothes/MNOX-WD12_V1.jpg" alt="">
-                  </div>
-                  <div class="image">
-                      <img src="clothes/MNOX-WD15_V1.webp" alt="">
-                      </div>
-                      <div class="image">
-                          <img src="clothes/RTFF-WD213_V1.webp" alt="">
-                          </div>
-                          <div class="image">
-                              <img src="clothes/RTFF-WD299_V1.webp" alt="">
-                              </div>
-                              <div class="image">
-                                <img src="clothes/LAQH-WD31_V1.webp" alt="">
-                                </div>
-                                <div class="image">
-                                  <img src="clothes/APEF-WD58_V1.jpg" alt="">
-                                  </div>
-                          </div>
-                            <hr noshade width="100%" size="1px">
-                            <div class="social">
-                              <div class="like">
-                                <i class="fa fa-thumbs-up"></i>
-                              </div>
-                              <div class="Message">
-                                <i class="fa fa-comments"></i>
-                              </div>
-                              <div class="share">
-                                <i class="fa fa-share"></i>
-                              </div>
-                            </div>
-                </div>
-              </div>
-              <!-- another one -->
-              <div class="lay_color">
-                <div class="chip">
-                    <img src="images/girl.jpg" loading="lazy" width="96" height="96">
-                   <span style="opacity: 0.7;"><strong>Chisom Ogene, Posted</strong></span>
-                  </div>
-                  <div class="stories">
-                    <ul class="des">
-                        <li><strong>Category:</strong> Fashion Designer, clothes</li>
-                        <li><strong>Experience:</strong> 5 years</li>
-                       
-                    </ul>
-                    <div class="images">
-                        <div class="image">
-                        <img src="clothes/IMG-20230529-WA0037-removebg-preview.png" loading="lazy">
-                        </div>
-                        <div class="image">
-                            <img src="clothes/IMG-20230529-WA0037-removebg-preview.png" loading="lazy">
-                            </div>
-                            <div class="image">
-                                <img src="clothes/IMG-20230529-WA0037-removebg-preview.png" loading="lazy">
-                                </div>
-                                <div class="image">
-                                    <img src="clothes/IMG-20230529-WA0037-removebg-preview.png" loading="lazy">
-                                    </div>
-                                    <div class="image">
-                                      <img src="clothes/IMG-20230529-WA0037-removebg-preview.png" loading="lazy">
-                                      </div>
-                                      <div class="image">
-                                        <img src="clothes/IMG-20230529-WA0037-removebg-preview.png" loading="lazy">
-                                        </div>
-                                </div>
-                    </div>
-                    <hr noshade width="100%">
-                    <div class="social">
-                      <div class="like">
-                        <i class="fa fa-thumbs-up"></i>
-                      </div>
-                      <div class="Message">
-                            <i class="fab fa-facebook-messenger"></i> 
-                      </div>
-                      <div class="share">
-                        <i class="fa fa-share"></i>
-                      </div>
-                    </div>
-                  </div>
+            <div class="lay_color" >
 
-                    <!-- another one -->
-              <div class="lay_color">
-                <div class="chip">
-                    <img src="images/pexels-adrienne-andersen-2661255.jpg" loading="lazy" width="96" height="96">
-                   <span style="opacity: 0.7;"><strong>Deborah Wells, Posted</strong></span>
-                  </div>
-                  <div class="stories">
-                    <ul class="des">
-                        <li><strong>Category:</strong> Fashion Designer, clothes</li>
-                        <li><strong>Experience:</strong> 5 years</li>
-                       
-                    </ul>
-                    <div class="images">
-                        <div class="image">
-                        <img src="clothes/download (1).webp" loading="lazy">
-                        </div>
-                        <div class="image">
-                            <img src="clothes/download.webp" loading="lazy">
-                            </div>
-                            <div class="image">
-                                <img src="clothes/FULL-LENGTH-2-904x1356.jpeg" loading="lazy">
-                                </div>
-                                <div class="image">
-                                    <img src="clothes/a1f9b5b5486199383517058f77b92447.webp" loading="lazy">
-                                    </div>
-                                    <div class="image">
-                                      <img src="clothes/d816f463bdef6a6bbce2df6058d82567.jpg" loading="lazy">
-                                      </div>
-                                      <div class="image">
-                                        <img src="clothes/ve688891266-244oak-002-1600886450.jpg" loading="lazy">
-                                        </div>
-                                </div>
-                    </div>
-                    <hr noshade width="100%">
-                    <div class="social">
-                      <div class="like">
-                        <i class="fa fa-thumbs-up"></i>
-                      </div>
-                      <div class="Message">
-                            <i class="fab fa-facebook-messenger"></i> 
-                      </div>
-                      <div class="share">
-                        <i class="fa fa-share"></i>
-                      </div>
-                    </div>
-                  </div>
+           
+  </div>
+</div>
 
-                    <!-- another one -->
-              <div class="lay_color">
-                <div class="chip">
-                    <img src="images/istockphoto-1017932446-612x612.jpg" loading="lazy" width="96" height="96">
-                   <span style="opacity: 0.7;"><strong>Abimbola Daniel Olarenwaju, Posted</strong></span>
-                  </div>
-                  <div class="stories">
-                    <ul class="des">
-                        <li><strong>Category</strong> Fashion Designer, clothes</li>
-                        <li><strong>Experience:</strong> 5 years</li>
-                        
-                    </ul>
-                    <div class="images">
-                        <div class="image">
-                        <img src="clothes/14bfb534902baca5437f1df9e7f12a80.jpg" loading="lazy">
-                        </div>
-                        <div class="image">
-                            <img src="clothes/b1c5d3bd90b7b14feb3f58ce5af6867a.jpg" loading="lazy">
-                            </div>
-                            <div class="image">
-                                <img src="clothes/asoebiguest.com-aso-ebi-men-styles-for-exquisite-gentlemen-d1f1086b1f49c1c9bceee252938c3940-600x600.jpg" loading="lazy">
-                                </div>
-                                <div class="image">
-                                    <img src="clothes/tola.jpg" loading="lazy">
-                                    </div>
-                                    <div class="image">
-                                      <img src="clothes/c4f9765eaa795ef65f2676a38d93e662.jpg" loading="lazy">
-                                      </div>
-                                      <div class="image">
-                                        <img src="clothes/tochi.jpg" loading="lazy">
-                                        </div>
-                                </div>
-                    </div>
-                    <hr noshade width="100%" size="1px">
-                    <div class="social">
-                      <div class="like">
-                        <i class="fa fa-thumbs-up"></i>
-                      </div>
-                      <div class="Message">
-                            <i class="fab fa-facebook-messenger"></i> 
-                      </div>
-                      <div class="share">
-                        <i class="fa fa-share"></i>
-                      </div>
-                    </div>
-                  </div>
+<!-- another one -->
+<div class="layout layout4">
+    <h3>Fashion Designers</h3>
+    <?php
+    include "config.php";
+    $sql = "SELECT file_path, uniqued, fname, lname FROM userd";
+    $user_data = $conn->query($sql);
 
-                  <!-- card tending list -->
-                  <div class="oga">
-                    <div class="trend_list">
-                      <div class="card">
-                        <img src="images/pexels-adrienne-andersen-2661255.jpg" alt="John" style="width:100%">
-                        <p class="title">CEO & Founder</p>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <p><button>Contact</button></p>
-                      </div>
-                      <div class="card">
-                        <img src="images/Brown-rose-gold-hair-color-for-black-women-removebg-preview.png" alt="John" style="width:100%">
-                        <p class="title">CEO & Founder</p>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <p><button>Contact</button></p>
-                      </div>
-                      <div class="card">
-                        <img src="images/pexels-andrew-personal-training-1322481.jpg" alt="John" style="width:100%">
-                        <p class="title">CEO & Founder</p>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <p><button>Contact</button></p>
-                      </div>
-                      </div>
-                      <div class="see">
-                      <p onclick="window.location.href='card.html'">See more <i class="fa-solid fa-arrow-right"></i></p>
-                      </div>
-                    </div>
-
-                  <!--End of card tending list -->
-
-                  <!-- another one -->
-              <div class="lay_color">
-                <div class="chip">
-                    <img src="images/istockphoto-1017932446-612x612.jpg" loading="lazy" width="96" height="96">
-                   <span style="opacity: 0.7;"><strong>Ayomide Akim, Posted</strong></span>
-                  </div>
-                  <div class="stories">
-                    <ul class="des">
-                        <li><strong>Category</strong> Fashion Designer, clothes</li>
-                        <li><strong>Experience:</strong> 5 years</li>
-                        
-                    </ul>
-                    <span>Designs / Fashion</span>
-                    <div class="images">
-                        <div class="image">
-                        <img src="clothes/Ankara-Jumpsuit-Styles-43.jpg" loading="lazy">
-                        </div>
-                        <div class="image">
-                            <img src="clothes/asoebi-Asoebi-@solesfashion-amillionstyles.webp" loading="lazy">
-                            </div>
-                            <div class="image">
-                                <img src="clothes/asoebiguest.com-latest-nigeria-lace-styles-and-designs-you-should-see-79f8d255-b6cf-4e60-859b-6ee75d5ee452-461x600.jpg" loading="lazy">
-                                </div>
-                                <div class="image">
-                                    <img src="clothes/images (2).jpg" loading="lazy">
-                                    </div>
-                                    <div class="image">
-                                      <img src="clothes/b1c5d3bd90b7b14feb3f58ce5af6867a.jpg" loading="lazy">
-                                      </div>
-                                      <div class="image">
-                                        <img src="clothes/images (3).jpg" loading="lazy">
-                                        </div>
-                                </div>
-                    </div>
-                    <hr noshade width="100%" size="1px">
-                    <div class="social">
-                      <div class="like">
-                        <i class="fa fa-thumbs-up"></i>
-                      </div>
-                      <div class="Message">
-                            <i class="fab fa-facebook-messenger"></i> 
-                      </div>
-                      <div class="share">
-                        <i class="fa fa-share"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="lay_color">
-                    <div class="chip">
-                        <img src="images/istockphoto-1017932446-612x612.jpg" loading="lazy" width="96" height="96">
-                       <span style="opacity: 0.7;"><strong>Ayomide Akim, Posted</strong></span>
-                      </div>
-                      <div class="stories">
-                        <ul class="des">
-                            <li><strong>Category</strong> Fashion Designer, clothes</li>
-                            <li><strong>Experience:</strong> 5 years</li>
-                            
-                        </ul>
-                        <span>Designs / Fashion</span>
-                        <div class="images">
-                            <div class="image">
-                            <img src="clothes/Ankara-Jumpsuit-Styles-43.jpg" loading="lazy">
-                            </div>
-                            <div class="image">
-                                <img src="clothes/asoebi-Asoebi-@solesfashion-amillionstyles.webp" loading="lazy">
-                                </div>
-                                <div class="image">
-                                    <img src="clothes/asoebiguest.com-latest-nigeria-lace-styles-and-designs-you-should-see-79f8d255-b6cf-4e60-859b-6ee75d5ee452-461x600.jpg" loading="lazy">
-                                    </div>
-                                    <div class="image">
-                                        <img src="clothes/images (2).jpg" loading="lazy">
-                                        </div>
-                                        <div class="image">
-                                          <img src="clothes/b1c5d3bd90b7b14feb3f58ce5af6867a.jpg" loading="lazy">
-                                          </div>
-                                          <div class="image">
-                                            <img src="clothes/images (3).jpg" loading="lazy">
-                                            </div>
-                                    </div>
-                        </div>
-                        <hr noshade width="100%" size="1px">
-                        <div class="social">
-                          <div class="like">
-                            <i class="fa fa-thumbs-up"></i>
-                          </div>
-                          <div class="Message">
-                                <i class="fab fa-facebook-messenger"></i> 
-                          </div>
-                          <div class="share">
-                            <i class="fa fa-share"></i>
-                          </div>
-                        </div>
-                      </div>
-                      
+    while ($row = mysqli_fetch_assoc($user_data)) {
+        ?>
+        <div class="chipz" data-uniqued="<?php echo $row['uniqued']; ?>">
+            <img src="<?php echo $row['file_path']; ?>" alt="Person" width="96" height="96">
+            <span><strong><?php echo $row['fname'] . ' ' . $row['lname']; ?></strong></span>
+            <div class="add">
+                <button class="botin1">View Details</button>
             </div>
-            
         </div>
-        
-        <div class="layout layout4">
-          <h3>Contact</h3>
-          <div class="search">
-          <input type="text" placeholder="Search...">
-          <i class="fa fa-search"></i>
-        </div>
-          <div class="right_bar">
-           <div class="Contact">
-            <div class="chips">
-              <img src="images/Brown-rose-gold-hair-color-for-black-women-removebg-preview.png" alt="Person" width="96" height="96">
-             <span><strong>John Doe</strong></span>
-            </div>
-            <div class="chips">
-              <img src="images/girl.jpg" alt="Person" width="96" height="96">
-             <span ><strong>John Doe</strong></span>
-            </div>
-            <div class="chips">
-              <img src="images/pexels-andrew-personal-training-1322481.jpg" alt="Person" width="96" height="96">
-             <span><strong>John Doe</strong></span>
-            </div>
-            <div class="chips">
-              <img src="images/pexels-adrienne-andersen-2661255.jpg" alt="Person" width="96" height="96">
-             <span><strong>John Doe</strong></span>
-            </div>
-            
-           </div>
-          </div>
-          <!-- for friend request -->
-          <h3>Message Request</h3>
-          <div class="chipz">
-              <img src="images/pexels-andrew-personal-training-1322481.jpg" alt="Person" width="96" height="96">
-             <span><strong>John Doe</strong></span>
-             <div class="add">
-                  <button class="botin1">Accept</button>
-                  <button class="botin2">Decline</button>
-             </div>
-        
-            </div>
-            <div class="chipz">
-              <img src="images/pexels-andrew-personal-training-1322481.jpg" alt="Person" width="96" height="96">
-             <span><strong>John Doe</strong></span>
-             <div class="add">
-                  <button class="botin1">Accept</button>
-                  <button class="botin2">Decline</button>
-             </div>
-             </div>
-             <div class="chipz">
-              <img src="images/pexels-andrew-personal-training-1322481.jpg" alt="Person" width="96" height="96">
-             <span><strong>John Doe</strong></span>
-             <div class="add">
-                  <button class="botin1">Accept</button>
-                  <button class="botin2">Decline</button>
-             </div>
-             
-          </div>
-          
-          <br>
-        </div>
+        <?php
+    }
+    ?>
+</div>
 
         <div class="message_space" id="message_space">
           <i class="fas fa-times-circle" id="close"></i>	</i>
@@ -1258,6 +912,55 @@ document.getElementById('message_input').addEventListener('keydown', function (e
   document.getElementById('open_message').addEventListener('click', OpenMessage);
 
     </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Existing HTML and PHP code -->
+<!-- ... -->
+</script>
+<script>
+    $(document).ready(function () {
+    var clickedUsers = JSON.parse(localStorage.getItem('clickedUsers')) || [];
+
+    $('.botin1').on('click', function () {
+        var uniqued = $(this).closest('.chipz').data('uniqued');
+
+        if (!clickedUsers.includes(uniqued)) {
+            clickedUsers.push(uniqued);
+
+            $.ajax({
+                type: 'GET',
+                url: 'get_user_details.php',
+                data: { uniqued: uniqued },
+                success: function (response) {
+                    $('.lay_color').append(response);
+                    localStorage.setItem('clickedUsers', JSON.stringify(clickedUsers));
+                },
+                error: function (xhr, status, error) {
+                    console.error(error);
+                }
+            });
+
+            // Remove the parent card of the clicked "Accept" button
+            $(this).closest('.chipz').remove();
+        }
+    });
+
+    clickedUsers.forEach(uniqued => {
+        $.ajax({
+            type: 'GET',
+            url: 'get_user_details.php',
+            data: { uniqued: uniqued },
+            success: function (response) {
+                $('.layout2').append(response);
+            },
+            error: function (xhr, status, error) {
+                console.error(error);
+            }
+        });
+    });
+});
+
+</script>
 
 
 </body>

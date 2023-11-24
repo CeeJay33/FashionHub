@@ -1,11 +1,11 @@
   <?php
     session_start();
     include "config.php";
-    $unique_id = $_SESSION['unique_id'];
+    $unique_id = $_SESSION['uniqued'];
     if(empty($unique_id)){
-        header("Location: Login.php");
+        header("Location: LoginD.php");
     }
-    $qry = mysqli_query($conn, "SELECT * FROM userd WHERE unique_id = '{$unique_id}'");
+    $qry = mysqli_query($conn, "SELECT * FROM userd WHERE uniqued = '{$unique_id}'");
     if(mysqli_num_rows($qry) > 0){
         $row = mysqli_fetch_assoc($qry);
         if($row){
@@ -206,70 +206,118 @@
     border-radius: 10px;
 }
 
-.layout_1{
+.layout1{
     grid-column: span 1;
     grid-row: span 27;
     border-top: none;
     border-right: none;
     border-top: none;
+    padding-left: 20px;
+}
+.left_bar{
+  padding: 17px 0;
+  display: flex;
 }
 
+.left_bar h4{
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding-left: 10px;
+  opacity: 0.7;
+}
+.left_bar i{
+  color: rgb(51, 116, 161);
+}
+
+.left_bar .chi{
+  display: inline-block;
+  padding-top: 3px;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.left_bar .chi h4{
+  padding-top: 12px;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.left_bar .chi img{
+  float: left;
+  margin: 22px -30px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.left_bar a{
+  text-decoration: none;
+  color: #000;
+}
 .layout_2{
     grid-column: span 3;
     grid-row: span 27;
     border-top: none;
     overflow-y: scroll;
     height: 90vh;
+    box-shadow: inset 0 0 10px 5px rgba(125, 124, 124, 0.1); /* Inner box shadow */
 }
 .second_box{
   background-color: #fffdfd;
   margin: 7px 7px;
-  height: 90vh;
+  height: 53vh;
+  
 }
 .second_box .box_1{
-  width: 700px;
+  width: 80%;
   position: relative;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   height: 300px;
   margin: auto;
   background-color: #fff;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .second_box .box_1 img{
-  width: 100%;
-  object-fit: cover;
-  max-height: 300px;
+   width: 100%;
+  height: 200px;
+  display: flex;
 }
-.second_box .box_1 .circle_box{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  position: absolute;
-  bottom: -14%;
-  right: 40%;
-}
-
-.second_box .box_1:hover{
-  background-color: #f4f4f4;
+.second_box .box_1 .circle_box {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden; /* Ensure the image stays within the circular boundaries */
+    position: absolute;
+    bottom: -16%;
+    right: 35%;
 }
 
-.second_box .box_1 .circle_box img{
-  border-radius: 50%;
-  width: 100%;
-  object-fit: cover;
-  max-height: 150px;
+.second_box .box_1:hover {
+    background-color: #f4f4f4;
 }
+
+.second_box .box_1 .circle_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 999;
+}
+
 
 .info{
-  margin: 20px 0;
+  margin: 20px auto;
   background-color: #fff;
-  box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.2), /* Left side shadow */
-         5px 0 5px -5px rgba(0, 0, 0, 0.2); /* Right side shadow */
   padding: 25px;
-  border-radius: 20px;
+  width: 98%;
   
 }
 .info li{
@@ -425,14 +473,14 @@ button:hover, a:hover {
 }
 
 .image-container {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1), 5px 0 5px rgba(0, 0, 0, 0.1);
   width: 280px;
   height: 420px;
   text-align: center;
   border-radius: 10px;
   padding: 15px; /* Add padding to the card */
   position: relative;
-  margin-bottom: 30px;
+  margin: 30px auto;
 }
 
     .image-container img{
@@ -440,6 +488,7 @@ button:hover, a:hover {
         max-height: 300px;
         border-radius: 10px;
         object-fit: cover;
+        
     }
     /* Style for the camera icon */
     .camera-icon {
@@ -464,7 +513,67 @@ button:hover, a:hover {
       color: red;
       cursor: pointer;
     }
+    .flex-container {
+  display: flex;
+  justify-content: space-between;
+}
 
+.left-inputs,
+.right-inputs {
+  flex: 1;
+}
+
+.left-inputs {
+  margin-right: 10px;
+}
+
+.right-inputs {
+  margin-left: 10px;
+}
+
+    .form-container {
+  width: 98%;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  display: block;
+  width: 20%;
+  height: 40px;
+  margin: 20px auto;
+  font-weight: 600;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
 </style>
     </head>
     
@@ -475,12 +584,12 @@ button:hover, a:hover {
                 <img src="others/hmm-removebg-preview.png" alt="">
                 <ul class="list">
             <li class="notification-badge">
-                <a href="users.html" class="active" title="Home">
+                <a href="dashboardP.php" class="active" title="Home">
                     <i class="fa-solid fa-house"></i>
                     <span class="badge">5</span>
                 </a>
             </li>
-            <li><a href="#news" title="Contact"><i class="fa-solid fa-phone"></i></a></li>
+            <li><a href="contactus.html" title="Contact"><i class="fa-solid fa-phone"></i></a></li>
             <li class="dropdown" title="About">
                 <button class="dropbtn"><i class="fa-solid fa-circle-info"></i></button>
                 <div class="dropdown-content"></div>
@@ -500,9 +609,15 @@ button:hover, a:hover {
                     <span class="badge">1</span>
                 </a>
             </li>
-            <li>
+            <li><?php
+
+            include "config.php";
+
+            $image = $row['file_path'];
+
+            ?>
                 <div class="chin">
-                    <img src="images/pexels-andrew-personal-training-1322481.jpg" alt="Person" width="96" height="96">
+                    <img src="<?php echo $image ?>" alt="Person" width="96" height="96">
                 </div>
             </li>
         </ul>
@@ -514,56 +629,134 @@ button:hover, a:hover {
                 <!-- griding section     -->
 
     <section class="grid_layout">
-        <div class="layout_1 layouts">
-            <p>Box1</p>
+        <div class="layout1 layouts">
+        <?php
+          include "config.php";
+          $fname = $row['fname']; 
+          $lname = $row['lname'];
+
+          $image = $row['file_path']
+
+
+          ?>
+          <div class="left_bar">
+            <div class="chi">
+              <img src = "<?php echo $image ?>"  width="96" height="96">
+             <h4><strong><?php echo $fname." ".$lname ?></strong></h4>
+            </div>
+          </div>
+          <div class="left_bar">
+            <i class="fas fa-users"></i>
+            <h4><a href="Preview.html">Preview</a></h4>
+          </div>
+          
+          <div class="left_bar">
+            <i class="fas fa-circle-info"></i>
+            <h4><a href="trending.php">Tending</a></h4>
+          </div>
+          
+          <br>
+          <hr noshade width="80%" size="1px">
+          <br>
+          <br>
+          <div class="left_bar">
+            <i class="fas fa-tags"></i>
+            <h4><a href="card.php">Card-Place</a></h4>
+          </div>
+          <div class="left_bar">
+            <i class="fas fa-gear"></i>
+            <h4><a href="">Logout</a></h4>
+          </div>
+         
         </div>
-        <div class="layout_2 layouts">
-            <div class="second_box">
-              <div class="box_1">
-                <div class="circle_box">
-                  <img src="images/Brown-rose-gold-hair-color-for-black-women-removebg-preview.png" alt="">
-                </div>
-              </div>
+        </div>
+  
+    <div class="layout_2 layouts">
+        <div class="second_box">
+        
+        <div class="box_1">
+    <form enctype="multipart/form-data" class="">
+    <input type="file" name="image" id="image" style="opacity: 1;" onchange="uploadAndDisplayImage(event)" placeholder="choose">
+    <label for="image" style="opacity: 1; margin: 5px 10px;">Choose a Company Logo</label>
+    <div class="circle_box">
+            <img id="previewImage" src="#" alt="Preview" style="display: none;">
+        </div>
+    </form>
+</div>
+
+
+        </div>
 
               <div class="info">
                 <ul>
                 <?php
-          include "config.php";
-              $fname = $row['fname']; 
-              $lname = $row['lname'];
+    include "config.php";
 
-          ?>
-                  <li><strong><?php echo $fname. ' '.$lname ?></strong> <i class="fa fa-pencil"></i></li>
-                  <li>5 years of experience  Arike <i class="fa fa-pencil"></i></li>
-                  <li>+234 8022619320 <i class="fa fa-pencil"></i></li>
-                  <li>Unity avenue street <i class="fa fa-pencil"></i></li>
-                  <li>I Design bags, shoes, and wears for wedding and all <i class="fa fa-pencil"></i></li>
-                </ul>
+    // Assuming $unique_id holds the user's unique identifier for this example
+    $query = "SELECT * FROM userd WHERE uniqued = '{$unique_id}'";
+    $result = mysqli_query($conn, $query);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+
+        $fname = $row['fname'];
+        $lname = $row['lname'];
+        $experience = $row['experience'];
+        $phone = $row['phone_number'];
+        $address = $row['address'];
+?>
+                  <li><strong><?php echo $fname . ' ' . $lname ?></strong> 
+        <li><strong>Experience : </strong><?php echo $experience ?> of Experience 
+        <li><strong>Phone : </strong><?php echo $phone ?> 
+        <li><strong>Address : </strong><?php echo $address ?>                 </ul>
                 </div>
+                <?php
+    } else {
+        echo "No data found for this user.";
+    }
+?>
 
-
-                <!-- <div class="card1" onclick="showCard(this)">
-                  <div class="imgg">
-                    <img src="img/agidi.png" alt="">
+                <form action="" method="post" class="form-container">
+                  <div class="flex-container">
+                    <div class="left-inputs">
+                      <div class="input-group">
+                        <label for="input1">Experience</label>
+                        <input type="text" id="input1" name="input1" required placeholder="eg.. 10 years">
+                      </div>
+                      <div class="input-group">
+                        <label for="input2">Phone Number</label>
+                        <input type="text" id="input2" name="input2" required placeholder="">
+                      </div>
+                    </div>
+                    <div class="right-inputs">
+                      <div class="input-group">
+                        <label for="input3">Category</label>
+                        <select id="input3" name="input3" required>
+                          <option value="Fashion Desiner" >Fashion Desiner</option>
+                          <!-- <option value="option2">Option 2</option>
+                          <option value="option3">Option 3</option> -->
+                        </select>
+                      </div>
+                      <div class="input-group">
+                        <label for="input4">Address</label>
+                        <input type="text" id="input4" name="input4" placeholder="" required>
+                      </div>
+                    </div>
                   </div>
-                  <h1>John Doe</h1>
-                  <p class="titl">CEO & Founder, Example</p>
-                  
-                  <p><button onclick="Contact()">Upload</button></p>
-                </div>
- -->
+                  <button type="submit" class="btn">Update</button>
+                </form>
 
               
                   <div class="flex">
                     <div class="image-container">
                       <input type="file" id="file-input-1" accept="image/*" onchange="handleFileChange('file-input-1')">
-                      <img id="selected-image-1" src="" alt="Selected Image">
-                      <button onclick="deleteImage('file-input-1')" style="margin-top: 20px;">Delete</button>
+                      <img id="selected-image-1">
+                      <button onclick="deleteImage('file-input-1')" style="margin-top: 20px;position: absolute; bottom: 1%; left: 0;">Delete</button>
                     </div>
                   
                     <!-- Repeat the above image container for multiple images if needed -->
                   
-                    <button onclick="uploadToDatabase()">Upload to Database</button>
+                    <!-- <button onclick="uploadToDatabase()">Upload to Database</button> -->
                 
                    
               </div>
@@ -652,5 +845,81 @@ function updateImage(inputId, imageId, deleteId) {
         // Additional actions after uploading to the database can be performed here
       }
     </script>
+
+    <!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.form-container').submit(function(event) {
+      // Prevent default form submission
+      event.preventDefault();
+
+      // Serialize form data
+      var formData = $(this).serialize();
+
+      // Ajax POST request to submit.php
+      $.ajax({
+        type: 'POST',
+        url: 'submit.php',
+        data: formData,
+        success: function(response) {
+          // Handle success response here
+          console.log('Form submitted successfully');
+          console.log(response); // Log the response from the server
+          // You can perform additional actions here on success
+        },
+        error: function(error) {
+          // Handle error
+          console.error('Error:', error);
+          // You can display an error message or handle the error accordingly
+        }
+      });
+    });
+  });
+</script>
+
+ <script>
+ // Function to retrieve the image URL from localStorage
+function getStoredImage() {
+    const storedImageUrl = localStorage.getItem('storedImage');
+    if (storedImageUrl) {
+        $('#previewImage').attr('src', storedImageUrl).show();
+    }
+}
+
+// Call the function when the page loads
+$(document).ready(function() {
+    getStoredImage();
+});
+
+// Function to upload and display the image
+function uploadAndDisplayImage(event) {
+    const selectedFile = event.target.files[0];
+    const formDataForUpload = new FormData();
+    formDataForUpload.append('image', selectedFile);
+
+    $.ajax({
+        type: 'POST',
+        url: 'profile.php',
+        data: formDataForUpload,
+        contentType: false,
+        processData: false,
+        success: function(response) {
+            // Display the selected image in the circle box
+            const imageUrl = URL.createObjectURL(selectedFile);
+            $('#previewImage').attr('src', imageUrl).show();
+
+            // Store the image URL in localStorage
+            localStorage.setItem('storedImage', imageUrl);
+        },
+        error: function(xhr, status, error) {
+            console.error(error);
+        }
+    });
+}
+
+
+</script>
+
 </body>
 </html>

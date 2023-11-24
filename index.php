@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Your meta tags, links, and styles here -->
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Online Boutique Store/Shop">
@@ -369,7 +368,8 @@ hr {
   padding: 40px 60px;
   background: #f4f5f1f1;
   align-items: center;
-  justify-content: space-around;
+  text-align: left;
+  justify-content: center;
   border-radius: 60px;
   margin: 0 20px;
 }
@@ -421,7 +421,8 @@ hr {
 .trend .con2{
   padding: 40px 60px;
   background: #f4f5f1f1;
-  align-items: center;
+  align-items: left;
+  text-align: left;
   justify-content: space-around;
   border-radius: 60px;
   margin: 0 20px;
@@ -470,6 +471,20 @@ hr {
   border: 1px solid #fff;
 }
 
+
+.top{
+  margin-top: 10rem;
+  margin-bottom: 0;
+}
+
+.top h2{
+  color: #000;
+  font-size: 35px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: left;
+  padding-left: 7rem;
+  font-weight: 500;
+}
 
 
 @keyframes colorchange{
@@ -682,6 +697,10 @@ button:hover, a:hover {
   transition: background-color 0.6s ease;
 }
 
+#footer{
+  position: relative;
+  bottom: -30%;
+}
 .active, .dot:hover {
   background-color: #717171;
 }
@@ -810,7 +829,7 @@ button:hover, a:hover {
                 <ul class="list">
                     <li><a href="">Home</a></li>
                     <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
                 </ul>
                 <div class="start">
                     <div class="login"><button class="btnnn" onclick="document.getElementById('id02').style.display='block'">Login</button></div>
@@ -864,36 +883,44 @@ button:hover, a:hover {
            
             <!-- for trending designers -->
 
+           <section class="top" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+              <h2>#Top 3 Hot Designers</h2>
+            </section>
+
         <div class="cards">
 
         <?php
 include "config.php";
 
-$sql = "SELECT DISTINCT images.user_id, images.file_path, userd.fname, userd.lname
-        FROM images
-        INNER JOIN userd ON images.user_id = userd.unique_id";
+$sql = "SELECT file_path, fname, lname, uniqued FROM userd";
+$user_data = $conn->query($sql);
 
-$unique_users_data = $conn->query($sql);
-$unique_user_ids = array();
+$count = 0; // Counter to limit the number of displayed cards
+while ($row = mysqli_fetch_assoc($user_data)) {
+    $unique_id = $row['uniqued'];
+    $count++;
 
-while ($row = mysqli_fetch_assoc($unique_users_data)) {
-    if (!in_array($row['user_id'], $unique_user_ids)) {
-        $unique_user_ids[] = $row['user_id'];
+    // Limit the display to only three cards
+    if ($count <= 3) {
 ?>
-            <div class="card" onclick="showCard(this)" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-                <img src="<?php echo $row['file_path'] ?>" alt="User Image" style="width:100%">
-                <h1><?php echo $row['fname'] . ' ' . $row['lname'] ?></h1>
-                <p class="title">CEO & Founder, Example</p>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <p><button onclick="Contact()">Contact</button></p>
-            </div>
-            <?php
+    <div class="card" onclick="showCard(this)" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        <img src="<?php echo $row['file_path']; ?>" alt="User Image" style="width:100%">
+        <h1><?php echo $row['fname'] . ' ' . $row['lname']; ?></h1>
+        <p class="title">Fashion Designer</p>
+        <a href="#"><i class="fa fa-star"></i></a>
+        <a href="#"><i class="fa fa-star"></i></a>
+        <a href="#"><i class="fa fa-star"></i></a>
+        <a href="#"><i class="fa fa-star"></i></a>
+        <p><button><a href="detail.php?uniqued=<?php echo $unique_id; ?>" style="color: #fff;">Contact</a></button></p>
+    </div>
+<?php
+    } else {
+        break; // Break the loop once three cards are displayed
     }
 }
 ?>
+
+
 
         </div>
           
@@ -927,7 +954,7 @@ while ($row = mysqli_fetch_assoc($unique_users_data)) {
             </div>
            </section>
 
-           <div class="coupon">
+           <!-- <div class="coupon">
               <div class="image">
                 <img src="clothes/istockphoto-1353629064-612x612-removebg-preview.png" alt="">
               </div>
@@ -938,51 +965,8 @@ while ($row = mysqli_fetch_assoc($unique_users_data)) {
                 
               </div>
               
-           </div>
-  
-
-          <section class="blog">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error repellendus ex aperiam minima culpa voluptates porro, qui, nesciunt eaque repellat impedit dolorem similique, quo atque quidem ratione labore aliquid nobis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia maiores corrupti voluptatem possimus, quisquam quasi sequi id obcaecati, nam aut recusandae similique aperiam, voluptatibus quidem neque. Ab, facilis expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus a quidem iusto perspiciatis officia aliquam delectus commodi rerum nam animi, quo neque pariatur aut blanditiis itaque consequatur inventore, aperiam saepe.</p>
-          </section>
-
-          <section class="types">
-        
-            <div class="exp_img">
-              <div class="img">
-                <img src="clothes/istockphoto-1459177998-612x612-removebg-preview.png" alt="">
-                <div class="desc">
-                  <ul>
-                    <li>Jeniffer Owens</li>
-                    <li>25k Followers</li>
-                    <li>10 years in business</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="img">
-                <img src="clothes/istockphoto-103060278-612x612-removebg-preview.png" alt="">
-                <div class="desc">
-                  <ul>
-                    <li>Jeniffer Owens</li>
-                    <li>25k Followers</li>
-                    <li>10 years in business</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="img">
-                <img src="clothes/istockphoto-1353629047-612x612-removebg-preview.png" alt="">
-                <div class="desc">
-                  <ul>
-                    <li>Jeniffer Owens</li>
-                    <li>25k Followers</li>
-                    <li>10 years in business</li>
-                  </ul>
-                </div>
-              </div>
-              <h2 style="color: #000;">Meet All Types of Experience Designers</h2>
-              <hr noshade size="2px" color="black">
-            </div>
-          </section>
-
+           </div> -->
+          
 
     <footer id="footer" class="section-p1">
         <div class="col">

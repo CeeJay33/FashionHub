@@ -1,19 +1,10 @@
 <?php
-// Ensure the session is started and any required configurations are included
 session_start();
-// Check if the request is a POST request and an image file is uploaded
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
-    // Include database configuration
-    include "config.php";
+include "config.php";
 
     $unique_id = $_SESSION['uniqued'];
-    $fname = $_SESSION['fname'];
-    $lname = $_SESSION['lname'];
-
-    // Directory where uploaded images will be saved
-    $targetDir = "uploads/";
-
-    // Get information about the image file
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
+    $targetDir = "profile/"; // Directory where uploaded images will be saved
     $file = $_FILES['image'];
     $fileName = basename($file['name']);
     $targetFilePath = $targetDir . $fileName;
@@ -28,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
             // Upload file to the server
             if (move_uploaded_file($file['tmp_name'], $targetFilePath)) {
                 // Insert image file path into the database
-                $sql = "INSERT INTO images (fname, lname, user_id, file_path) VALUES ('$fname', '$lname','$unique_id' ,'$targetFilePath')";
+                $sql = "UPDATE userd SET file_path = '$targetFilePath' WHERE uniqued = ' $unique_id'";
                 if ($conn->query($sql) === TRUE) {
                     echo "Image uploaded successfully.";
                 } else {

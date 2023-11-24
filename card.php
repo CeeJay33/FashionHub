@@ -411,125 +411,39 @@ button:hover, a:hover {
         </div>
         <div class="layout layout2">
           <div class="all">
-            <div class="card" onclick="showCard(this)">
-              <img src="images/pexels-adrienne-andersen-2661255.jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
+          <?php
+include "config.php";
 
-            <div class="card" onclick="showCard(this)">
-              <img src="images/pexels-andrew-personal-training-1322481.jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
+$sql = "SELECT DISTINCT images.user_id, images.file_path, userd.fname, userd.lname
+        FROM images
+        INNER JOIN userd ON images.user_id = userd.uniqued";
 
-            <div class="card" onclick="showCard(this)">
-              <img src="images/Brown-rose-gold-hair-color-for-black-women-removebg-preview.png" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
+$unique_users_data = $conn->query($sql);
+$unique_user_ids = array();
 
-            <div class="card" onclick="showCard(this)">
-              <img src="images/handsome-black-man-blue-polo-9mr9n48skon1tp1c.jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
+while ($row = mysqli_fetch_assoc($unique_users_data)) {
+    if (!in_array($row['user_id'], $unique_user_ids)) {
+        $unique_user_ids[] = $row['user_id'];
+?>
+            <div class="card" >
+                <img src="<?php echo $row['file_path'] ?>" alt="User Image" style="width:100%">
+                <h1><?php echo $row['fname'] . ' ' . $row['lname'] ?></h1>
+                <p class="title">Fashion Designer</p>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <p><button onclick="Contact()">Contact</button></p>
             </div>
+            <?php
+    }
+}
+?>
 
-            <div class="card" onclick="showCard(this)">
-              <img src="images/pexels-adrienne-andersen-2661255.jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
+        </div>
+          
 
-            <div class="card" onclick="showCard(this)">
-              <img src="clothes/APEF-WD58_V1.jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
-
-            <div class="card" onclick="showCard(this)">
-              <img src="clothes/asoebi-Asoebi-@solesfashion-amillionstyles.webp" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
-
-            <div class="card" onclick="showCard(this)">
-              <img src="clothes/Ankara-Jumpsuit-Styles-43.jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
-
-            <div class="card" onclick="showCard(this)">
-              <img src="clothes/b1c5d3bd90b7b14feb3f58ce5af6867a.jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
-
-            <div class="card" onclick="showCard(this)">
-              <img src="clothes/images (2).jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
-
-            <div class="card" onclick="showCard(this)">
-              <img src="clothes/tola.jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
-
-            <div class="card" onclick="showCard(this)">
-              <img src="clothes/tochi.jpg" alt="John" style="width:100%">
-              <h1>John Doe</h1>
-              <p class="title">CEO & Founder, Example</p>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <p><button onclick="Contact()">Contact</button></p>
-            </div>
+          
             
           </div>
         </div>

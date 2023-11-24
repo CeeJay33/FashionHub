@@ -15,6 +15,156 @@
         body{
             background-color: #fff;
         }
+
+
+        .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.navigation img{
+    width: 180px;
+    height: 80px;
+}
+
+.navigation a {
+  float: left;
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.notification-badge {
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px 8px;
+            font-size: 12px;
+        }
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  z-index: 999;
+
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  margin: auto;
+  border: none;
+  outline: none;
+  color: rgb(14, 8, 8);
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 18px;
+    font-family: sans-serif;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.navigation a:hover, .dropdown:hover .dropbtn {
+  background-color: #000;
+  color: #fff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.list{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    font-family: sans-serif;
+    opacity: 0.9;
+}
+
+.list .active{
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.list li{
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.third{
+    display: flex;
+    margin-right: 20px;
+    gap: 25px;
+    opacity: 0.9;
+}
+
+.third li{
+    list-style: none;
+}
+
+.third .chin{
+  background: #fff;
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 13px;
+  font-weight: lighter;
+  line-height: 50px;
+  border-radius: 25px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+
+.third .chin img {
+  float: right;
+  margin: 0 10px 0 -25px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
     #page-header{
         background-image: url(others/gradient-banner.jpg);
         background-repeat: no-repeat;
@@ -148,20 +298,47 @@
 
 <body>
 
-    <section id="header" style="background-color: #fff;box-shadow: 0;">
-        <a href="#"><img src="others/hmm-removebg-preview.png" width="150" class="logo" alt=""></a>
-    <div>
-        <ul id="navbar">
-            <li><a href="dashboardP.php">Dashboard</a></li>
-            <li><a href="about.php">About</a></li>
-            <li><a class="active" href="contactUs.php">Contact</a></li>
+    <header>
+        <div class="navigation">
+                <img src="others/hmm-removebg-preview.png" alt="">
+                <ul class="list">
+            <li class="notification-badge">
+                <a href="users.php" class="active" title="Home">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="badge">2</span>
+                </a>
+            </li>
+            <li><a href="contactUs.html" title="Contact"><i class="fa-solid fa-phone"></i></a></li>
+            <li class="dropdown" title="About">
+                <button class="dropbtn"><i class="fa-solid fa-circle-info"></i></button>
+                <div class="dropdown-content"></div>
+            </li>
         </ul>
+        <ul class="third">
+            <li><a href="users.html"><i class="fa-solid fa-tags"></i></a></li>
+            <div class="notification-badge">
+        <a href="#message" title="Messages">
+        <i class="fab fa-facebook-messenger" id="open_message"></i>
+            <span class="badge">0</span>
+        </a>
     </div>
-    <div id="mobile">
-        <a href="cart.html"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-        <i id="bar" class="fas fa-outdent"></i>
-    </div>
-</section>
+            <li class="notification-badge">
+                <a href="users.html" title="Notifications">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="badge">0</span>
+                </a>
+            </li>
+            <li>
+                <div class="chin">
+                    <img src="images/pexels-andrew-personal-training-1322481.jpg" alt="Person" width="96" height="96">
+                </div>
+            </li>
+        </ul>
+    
+            </div>
+        
+            
+        </header>
     <section id="page-header" class="about-header"  data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
         <h2>#Contact</h2>
         <p>LEAVE A MESSAGE.We would love to hear from you.</p>
@@ -223,20 +400,6 @@
             </div>
         </div>
     </section>
-    
-    <section id="newsletter" class="section-p1 section-m1" data-aos="fade-up" data-aos-duration="10000" data-aos-once="true">
-        <div class="newstext">
-            <h4>Sign Up for Newsletter</h4>
-            <p>Get E-mail updates about our latest shop and <span>special offers</span></p>
-           </div>
-            <div class="form">
-                <input type="text" placeholder="Your Email address">
-                <button class="normal">Sign Up</button>
-        
-        </div>
-
-    </section>
-
 
     <footer class="section-p1" data-aos="fade-down" data-aos-duration="10000" data-aos-once="true">
         <div class="col">

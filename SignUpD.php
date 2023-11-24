@@ -12,13 +12,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         body{
-    position: relative;
+    position: sticky;
     background: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(img/flat-lay-stationary-arrangement-desk-with-copy-space-coffee\ \(2\).jpg);
+    /* background-image: url(img/flat-lay-stationary-arrangement-desk-with-copy-space-coffee\ \(2\).jpg); */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -185,6 +185,14 @@ form input[type="file"]{
     outline: none;
 }
 
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
 .form form .input1 label{
     opacity: 0.8;
     font-size: 15px;
@@ -296,6 +304,26 @@ form input[type="file"]{
                     <label for="lname">Last Name</label>
                     <input type="text" name="lname" placeholder="Last Name" id="myInput"  pattern="[a-zA-Z'.''\s]*">
                 </div>
+                <div class="input">
+                        <label for="input1">Experience</label>
+                        <input type="text" id="input1" name="Experience" required placeholder="eg.. 10 years">
+                      </div>
+                      <div class="input">
+                        <label for="input2">Phone Number</label>
+                        <input type="tel" id="input2" name="Phone" required placeholder="">
+                      </div>
+                      <div class="input">
+                        <label for="input3">Category</label>
+                        <select id="input3" name="Category" required>
+                          <option value="Fashion Desiner" >Fashion Desiner</option>
+                          <!-- <option value="option2">Option 2</option>
+                          <option value="option3">Option 3</option> -->
+                        </select>
+                      </div>
+                      <div class="input">
+                        <label for="input4">Address</label>
+                        <input type="text" id="input4" name="Address" placeholder="" required>
+                      </div>
                 <div class="input">
                     <label for="email">Email</label>
                     <input type="email" name="email"  id="myInput" placeholder="Enter your Email"  >
