@@ -3,7 +3,7 @@
     include "config.php";
     $unique_id = $_SESSION['unique_id'];
     if(empty($unique_id)){
-        header("Location: Login.php");
+        header("Location: LoginD.php");
     }
     $qry = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = '{$unique_id}'");
     if(mysqli_num_rows($qry) > 0){

@@ -299,7 +299,7 @@ form input[type="file"]{
         <div class="Forgot">
             <a href="recovery.php" style="text-decoration: none;">Forgot Password</a>
         </div>
-        <div class="link">Don't have an Account? <a href="./SignUpC.php">Register</a></div>
+        <div class="link">Don't have an Account? <a href="./SignUpD.php">Register</a></div>
     </div>
     <script>
         document.getElementById("myForm").onsubmit = function(){
@@ -316,9 +316,9 @@ form input[type="file"]{
         const form = document.querySelector('form');
 const errorText = document.querySelector('.error-text');
 
-form.onsubmit = (e) => {
-    e.preventDefault();
-};
+ form.onsubmit = (e) => {
+     e.preventDefault();
+ };
 
 const Button = form.querySelector('.submit input');
 
@@ -332,7 +332,7 @@ Button.onclick = () => {
     formData.append('password', password);
 
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'ProgramSignInD.php', true);
+    xhr.open('POST', 'ProgramSigninD.php', true);
 
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {

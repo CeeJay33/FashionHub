@@ -1,6 +1,8 @@
   <?php
     session_start();
     include "config.php";
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
     $unique_id = $_SESSION['uniqued'];
     if(empty($unique_id)){
         header("Location: LoginD.php");
@@ -267,6 +269,7 @@
     border-top: none;
     overflow-y: scroll;
     height: 90vh;
+    background: #fff;
     box-shadow: inset 0 0 10px 5px rgba(125, 124, 124, 0.1); /* Inner box shadow */
 }
 .second_box{
@@ -301,7 +304,7 @@
 }
 
 .second_box .box_1:hover {
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
 }
 
 .second_box .box_1 .circle_box img {
@@ -589,7 +592,7 @@ select {
                     <span class="badge">5</span>
                 </a>
             </li>
-            <li><a href="contactus.html" title="Contact"><i class="fa-solid fa-phone"></i></a></li>
+            <li><a href="contactdes.php" title="Contact"><i class="fa-solid fa-phone"></i></a></li>
             <li class="dropdown" title="About">
                 <button class="dropbtn"><i class="fa-solid fa-circle-info"></i></button>
                 <div class="dropdown-content"></div>
@@ -610,15 +613,16 @@ select {
                 </a>
             </li>
             <li><?php
+    include "config.php";
+    $sql = "SELECT file_path, company_name, uniqued FROM userd";
+    $user_data = $conn->query($sql);
 
-            include "config.php";
+?>
+<div class="chin">
+    <img src="<?php echo $row['file_path']; ?>" alt="Person" width="96" height="96">
+</div>
 
-            $image = $row['file_path'];
 
-            ?>
-                <div class="chin">
-                    <img src="<?php echo $image ?>" alt="Person" width="96" height="96">
-                </div>
             </li>
         </ul>
     
@@ -631,20 +635,18 @@ select {
     <section class="grid_layout">
         <div class="layout1 layouts">
         <?php
-          include "config.php";
-          $fname = $row['fname']; 
-          $lname = $row['lname'];
+    include "config.php";
+    $sql = "SELECT file_path, fname, lname, uniqued FROM userd";
+    $user_data = $conn->query($sql);
 
-          $image = $row['file_path']
+?>
+<div class="left_bar">
+    <div class="chi">
+        <img src="<?php echo $row['file_path']; ?>" width="96" height="96">
+        <h4><strong><?php echo $row['fname'] . ' ' . $row['lname']; ?></strong></h4>
+    </div>
+</div>
 
-
-          ?>
-          <div class="left_bar">
-            <div class="chi">
-              <img src = "<?php echo $image ?>"  width="96" height="96">
-             <h4><strong><?php echo $fname." ".$lname ?></strong></h4>
-            </div>
-          </div>
           <div class="left_bar">
             <i class="fas fa-users"></i>
             <h4><a href="Preview.html">Preview</a></h4>
@@ -691,21 +693,19 @@ select {
                 <ul>
                 <?php
     include "config.php";
-
-    // Assuming $unique_id holds the user's unique identifier for this example
-    $query = "SELECT * FROM userd WHERE uniqued = '{$unique_id}'";
+    $unique_id = $_SESSION['uniqued'];
+    $query = "SELECT * FROM userd WHERE uniqued = '$unique_id'";
     $result = mysqli_query($conn, $query);
 
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
 
-        $fname = $row['fname'];
-        $lname = $row['lname'];
+        $companyname = $row['company_name'];
         $experience = $row['experience'];
         $phone = $row['phone_number'];
         $address = $row['address'];
 ?>
-                  <li><strong><?php echo $fname . ' ' . $lname ?></strong> 
+                  <li style="font-size: 26px;margin-bottom: 20px;font-family: Georgia;"><strong><?php echo $companyname ?></strong> 
         <li><strong>Experience : </strong><?php echo $experience ?> of Experience 
         <li><strong>Phone : </strong><?php echo $phone ?> 
         <li><strong>Address : </strong><?php echo $address ?>                 </ul>

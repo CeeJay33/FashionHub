@@ -12,6 +12,112 @@
     <title>Kay_Jay_Boutique</title>
     <link rel="icon" href="./others/logo.png" type="image/x-icon">
     <style>
+
+*{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+        font-family: sans-serif;
+        color: #000;
+        background: #fff;
+      }
+
+        span{
+            font-size: 15px;
+            font-weight: 400;
+            color: #000;
+        }
+
+        header {
+  padding: 0.25rem 0.5rem;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navigation img {
+  width: 180px;
+  height: 80px;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.list li {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.list li a {
+  color: #000;
+  text-decoration: none;
+}
+.list li a:hover,
+.list li a.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+.start {
+  display: flex;
+  /* justify-content: right; */
+  align-items: center;
+  justify-content: space-between;
+}
+.start .btnn {
+  background: #000;
+  padding: 18px 30px;
+  color: #fff;
+  border-radius: 40px;
+  border: 1px solid #fff;
+}
+
+.start .btnnn {
+  color: #000;
+  font-size: 16px;
+  padding: 12px 30px;
+  border-radius: 40px;
+  border: 1px solid #fff;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 18px 30px;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.menu-bar {
+  width: 60px;
+  height: 40px;
+  display: none;
+}
         #feature{
     display: flex;
     align-items: center;
@@ -151,20 +257,43 @@
 
 <body>
 
-    <section id="header" style="background-color: #fff;box-shadow: 0;">
-        <a href="#"><img src="others/hmm-removebg-preview.png" width="150" class="logo" alt=""></a>
-    <div>
-        <ul id="navbar">
-            <li><a href="dashboardP.php">Dashboard</a></li>
-            <li><a class="active" href="about.php">About</a></li>
-            <li><a href="contactUs.php">Contact</a></li>
-        </ul>
-    </div>
-    <div id="mobile">
-        <a href="cart.html"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-        <i id="bar" class="fas fa-outdent"></i>
-    </div>
-</section>
+    <header>
+        <nav class="navigation">
+          <img src="./others/hmm-removebg-preview.png" alt="" />
+          <!-- <div class="hamburger-menu">
+      <i class="fas fa-bars" onclick="toggleMenu()"></i>
+  </div> -->
+          <div class="nav-links active">
+            <ul class="list">
+              <li><a href="index.php">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="contactus.php">Contact</a></li>
+              <li><a href="designers.php">Designers</a></li>
+            </ul>
+            <div class="start">
+              <div class="login">
+                <button
+                  class="btnnn"
+                  onclick="document.getElementById('id02').style.display='block'"
+                >
+                  Login
+                </button>
+              </div>
+              <div class="signup">
+                <button
+                  class="btnn"
+                  onclick="document.getElementById('id01').style.display='block'"
+                >
+                  SignUp
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-bar" id="menuBar">
+          <i class="fas fa-bars" class="menu-bar" id="menuBar"></i>
+          </div>
+        </nav>
+      </header>
 
     <section id="page-header" class="about-header"  data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
         <h2>#AboutUs</h2>
@@ -191,15 +320,17 @@
             <video src="./others/R.mp4" autoplay loop></video>
         </div>
     </section>
-
+    <marquee>
     <section id="Custom">
+       
         <div class="detail" onclick="show()">
             <div class="profile-container">
-                <img src="images/e22e56a97e1129969303c844cb1daa08.jpg" alt="">
+                <img src="images/TOD09516.jpg" alt="">
             </div>
             <div class="description">
-                <p>I want to thank the developer of this app this website i was able to connect to Fashionists it really changed my life</p>
-                
+                <p>Name: John Doe</p>
+                <p>Profession: Web Developer</p>
+                <p>Years of Experience: 5</p>
                 <!-- Add more description lines as needed -->
             </div>
         </div>
@@ -237,22 +368,8 @@
                 <!-- Add more description lines as needed -->
             </div>
         </div>
-    
     </section>
-
-    <section id="newsletter" class="section-p1 section-m1" data-aos="fade-up" data-aos-duration="10000" data-aos-once="true">
-        <div class="newstext">
-            <h4>Sign Up for Newsletter</h4>
-            <p>Get E-mail updates about our latest shop and <span>special offers</span></p>
-           </div>
-            <div class="form">
-                <input type="text" placeholder="Your Email address">
-                <button class="normal">Sign Up</button>
-        
-        </div>
-
-    </section>
-
+</marquee>
 
     <footer class="section-p1" data-aos="fade-down" data-aos-duration="10000" data-aos-once="true">
         <div class="col">

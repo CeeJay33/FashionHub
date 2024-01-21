@@ -13,6 +13,7 @@ use PHPMailer\PHPMailer\Exception;
 $fname = mysqli_real_escape_string($conn, $_POST['fname']);
 $lname = mysqli_real_escape_string($conn, $_POST['lname']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
+$CompanyName = mysqli_real_escape_string($conn, $_POST['cname']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
 $Cpassword = mysqli_real_escape_string($conn, $_POST['cpassword']);
 $Experience = mysqli_real_escape_string($conn, $_POST['Experience']);
@@ -22,7 +23,7 @@ $Address = mysqli_real_escape_string($conn, $_POST['Address']);
 $Check = mysqli_real_escape_string($conn, $_POST['check']);
 $Verification_status = '0';
 
-if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !empty($Cpassword) && !empty($Check) && !empty($Experience) && !empty($Phone) && !empty($Category) && !empty($Address)) {
+if (!empty($fname) && !empty($lname) && !empty($CompanyName) && !empty($email) && !empty($password) && !empty($Cpassword) && !empty($Check) && !empty($Experience) && !empty($Phone) && !empty($Category) && !empty($Address)) {
     if ($password == $Cpassword) {
         $sql = mysqli_query($conn, "SELECT email FROM userd WHERE email = '{$email}'");
         if (mysqli_num_rows($sql) > 0) {
@@ -30,7 +31,7 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !
         } else {
             $rand_id = rand(time(), 10000000);
             $otp = mt_rand(1111, 9999);
-            $sql2 = mysqli_query($conn, "INSERT INTO userd (uniqued, fname, lname, email, password, otp, experience, phone_number, category, address) VALUES ({$rand_id}, '{$fname}', '{$lname}', '{$email}', '{$password}', '{$otp}', '{$Experience}', '{$Phone}', '{$Category}', '{$Address}')");
+            $sql2 = mysqli_query($conn, "INSERT INTO userd (uniqued, fname, lname, company_name, email, password, otp, experience, phone_number, category, address) VALUES ({$rand_id}, '{$fname}', '{$lname}', '{$CompanyName}', '{$email}', '{$password}', '{$otp}', '{$Experience}', '{$Phone}', '{$Category}', '{$Address}')");
             if ($sql2) {
                 
                 $mail = new PHPMailer(true);
@@ -55,8 +56,6 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !
                         $row = mysqli_fetch_assoc($sql3);
                         $_SESSION['uniqued'] = $row['uniqued'];
                         $_SESSION['otp'] = $row['otp'];
-                        $_SESSION['fname'] = $row['fname'];
-                        $_SESSION['lname'] = $row['lname'];
                         echo "success";
                     } else {
                         echo "Something went wrong";

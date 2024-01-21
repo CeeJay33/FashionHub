@@ -11,7 +11,7 @@
         if ($row) {
             $_SESSION['verification_status'] = $row['verification_status'];
             if ($row['verification_status'] == 'verified') {
-                header("Location: dashboardp.php");
+                header("Location: dashboardP.php");
             }
         }
     }
@@ -343,7 +343,7 @@ form input[type="file"]{
                         if (xhr.status === 200) {
                             let data = xhr.response.trim();
                     if (data === "success") {
-                        location.href = 'dashboardp.php';
+                        location.href = 'dashboardP.php';
                     } else {
                         errorText.textContent = data;
                         errorText.style.display = 'block';

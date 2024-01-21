@@ -1,41 +1,36 @@
 <?php
-include "config.php";
-
-// Check if the 'uniqued' parameter is set in the URL
-if (isset($_GET['uniqued'])) {
-    // Get the user ID from the URL
-    $userId = $_GET['uniqued'];
-
-    // Prepare and execute a parameterized query to fetch user details
-    $query = "SELECT * FROM userd WHERE uniqued = ?";
-    $stmt = $conn->prepare($query);
-
-    // Bind the user ID parameter
-    $stmt->bind_param('i', $userId); // Assuming user ID is an integer
-
-    // Execute the query
-    $stmt->execute();
-
-    // Get the result
-    $result = $stmt->get_result();
-
-    // Check if the user exists and display details
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-?>
-
-
+  // session_start();
+  // include "config.php";
+  // $unique_id = $_SESSION['unique_id'];
+  // if(empty($unique_id)){
+  //     header("Location: Login.php");
+  // }
+  // $qry = mysqli_query($conn, "SELECT * FROM userc WHERE unique_id = '{$unique_id}'");
+  // if(mysqli_num_rows($qry) > 0){
+  //     $row = mysqli_fetch_assoc($qry);
+  //     if($row){
+  //         $_SESSION['verification_status'] = $row['verification_status'];
+  //         if($row['verification_status'] != 'verified'){
+  //         header("Location: verify.php");
+  //         }
+  //     }
+  // }
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/d5bd3063f6.js" crossorigin="anonymous"></script>
-    <title>Document</title>
-    <style>
 
-        *{
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Online Boutique Store/Shop">
+    <meta name="keywords" content="Clothes,bags,shoes,">
+	<script src="https://kit.fontawesome.com/d5bd3063f6.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css">
+    <title>Kay_Jay_Boutique</title>
+    <link rel="icon" href="./others/logo.png" type="image/x-icon">
+    <style>
+   *{
             box-sizing: border-box;
             padding: 0;
             margin: 0;
@@ -141,6 +136,7 @@ button:hover {
   display: none;
 }
 
+
   /* Pop ups for login */
   .cancelbtn1, .deletebtn1 {
   float: left;
@@ -162,8 +158,16 @@ button:hover {
 
 /* Add padding and center-align text to the container */
 .container1 {
-  padding: 16px;
+  padding: 36px;
   text-align: center;
+}
+
+.container1 h1{
+    padding-bottom: 5px;
+}
+
+.container1 p{
+    padding-bottom: 10px;
 }
 
 /* The Modal (background) */
@@ -253,8 +257,16 @@ hr {
 
 /* Add padding and center-align text to the container */
 .container {
-  padding: 16px;
+  padding: 36px;
   text-align: center;
+}
+
+.container h1{
+    padding-bottom: 5px;
+}
+
+.container p{
+    padding-bottom: 10px;
 }
 
 /* The Modal (background) */
@@ -318,7 +330,7 @@ hr {
 }
 
 .login{
-    color: #000;
+    color: #fff;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 15px;
@@ -335,167 +347,119 @@ hr {
 }
 
 
-.main_container{
+
+.all{
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+  width: 280px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px; /* Add padding to the card */
+}
+
+.card h1{
+  padding-bottom: 10px;
+}
+.card p{
+  padding-bottom: 5px;
+}
+
+.card img{
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
   width: 100%;
+  font-size: 18px;
+  border-radius: 10px; /* Add border-radius to the button */
+  margin-top: 10px; /* Add some spacing between the button and other elements */
 }
 
-.info{
-  padding: 20px 2rem;
-  height: 480px;
-  /* box-shadow: inset 0 0 10px 5px rgba(125, 124, 124, 0.1); */
-  background: #fff;
-  border-radius: 15px;
-  margin-right: 10px;
+.card a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  margin: 5px; /* Add margin to the social media icons */
 }
 
-.title{
-  display: flex;
-  justify-content: space-between;
-  margin-right: 3rem;
-}
-.company_name h3{
-  font-size: 35px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.followers{
-  padding: 1rem 0;
-}
-
-.rating_followers i{
+.card i{
   color: gold;
 }
-        .carousel-container {
-  width: 100%;
-  text-align: center;
-  margin-left: 1rem;
-  /* border: 1px solid rgb(226, 224, 224); */
-  border-radius: 10px;
-  background-color: #fff;
-}
 
-.main-image img {
-  width: 320px;
-  height: 400px;
-  border-radius: 7px;
+button:hover, a:hover {
+  opacity: 0.7;
 }
-
-.company_logo img{
-  width: 90px;
-}
-
-.thumbnail-images {
-  margin-top: 20px;
-}
-.thumbnail-images img{
-    width: 120px;
-    height: 180px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-.thumbnail {
-  width: 80px;
-  height: 60px;
-  margin-right: 10px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-}
-
-.thumbnail:hover {
-  border: 1px solid #000;
-}
-
-.contact{
-  line-height: 30px;
-}
-.contact_sec{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #040424;
-    padding: 20px 0;
-    border-radius: 5px;
-}
-
-.carousel-container button{
-    border: none;
-    background-color: #000;
-    color: #fff;
-
-}
-
-.carousel-container .btn{
-    padding: 10px 0;
-    width: 50%;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.category{
-  padding: 1rem 0;
-  line-height: 25px;
-}
-
-.category p{
-  font-size: 16px;
-}
-
 
 @media (max-width: 500px) {
 
-  *{
-      overflow-x: none;
-    }
-  .menu-bar {
-    display: block;
-  }
+html{
+  overflow-x: hidden;
+}
+.menu-bar {
+display: block;
+}
 
-  .nav-links {
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    padding: 0 2rem;
-    background-color: white;
-    box-shadow: 2px 2px 8px #00000031;
-    z-index: 1000;
-    left: -500px;
-    transition: all 1s ease-in;
-  }
+.nav-links {
+display: none;
+flex-direction: column;
+position: fixed;
+top: 0;
+bottom: 0;
+height: 100%;
+padding: 0 2rem;
+background-color: white;
+box-shadow: 2px 2px 8px #00000031;
+z-index: 1000;
+left: -500px;
+transition: all 1s ease-in;
+}
 
-  .list,
-  .start {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 0;
-    left: 0;
-  }
+.list,
+.start {
+flex-direction: column;
+gap: 2rem;
+padding: 2rem 0;
+left: 0;
+}
 
-  .nav-links.active {
-    left: 0;
-    transition: all 1s ease-out;
-  }
+.nav-links.active {
+left: 0;
+transition: all 1s ease-out;
+}
 
-  .main_container {
+.all {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 100%;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* margin: auto; */
+    justify-content: center;
 }
 
-.carousel-container {
-    width: 100%;
-    text-align: center;
-    margin-left: 0;
-    /* border: 1px solid rgb(226, 224, 224); */
-    border-radius: 10px;
-    background-color: #fff;
-}
+.all .card{
+  margin-top: 40px
 }
 
+}
 
 
     </style>
@@ -539,8 +503,8 @@ hr {
       </nav>
     </header>
 
-     <!-- sign in pops -->
-     <div id="id02" class="modal1">
+       <!-- sign in pops -->
+       <div id="id02" class="modal1">
           <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
           <form class="modal-content1">
             <div class="container1">
@@ -571,157 +535,57 @@ hr {
             </div>
           </form>
         </div>
-        
 
+          <div class="all">
+          <?php
+include "config.php";
 
+$sql = "SELECT file_path, company_name, uniqued FROM userd";
+$user_data = $conn->query($sql);
 
+while ($row = mysqli_fetch_assoc($user_data)) {
+    $unique_id = $row['uniqued'];
+?>
+            <div class="card" >
+                <img src="<?php echo $row['file_path'] ?>" alt="User Image" style="width:100%">
+                <h1><?php echo $row['company_name'] ?></h1>
+                <p class="title">Fashion Designer</p>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <p><button><a href="detail.php?uniqued=<?php echo $unique_id; ?> "style="color: #fff;" >Contact</a></button></p>
+            </div>
+            <?php
+    }
+
+?>
+
+        </div>
+          
+
+          
             
-        <div class="main_container">
-    <div class="carousel-container">
-        <!-- Using PHP to populate the main image -->
-        <div class="main-image">
-            <?php
-            // Fetch the first image associated with the user
-            $firstImageQuery = "SELECT * FROM images WHERE user_id = ? LIMIT 1";
-            $stmt_first_image = $conn->prepare($firstImageQuery);
-            $stmt_first_image->bind_param('i', $userId);
-            $stmt_first_image->execute();
-            $result_first_image = $stmt_first_image->get_result();
-
-            if ($row_first_image = $result_first_image->fetch_assoc()) {
-                echo '<img src="' . $row_first_image['file_path'] . '" alt="Main Image">';
-            } else {
-                echo '<img src="' . $user['file_path'] . '" alt="Main Image">';
-            }
-            ?>
-        </div>
-        <div class="thumbnail-images">
-            <!-- Using PHP to populate thumbnail images from the database -->
-            <?php
-            // Fetch and display user images in thumbnails
-            $images_query = "SELECT * FROM images WHERE user_id = ?";
-            $stmt_images = $conn->prepare($images_query);
-            $stmt_images->bind_param('i', $userId);
-            $stmt_images->execute();
-            $result_images = $stmt_images->get_result();
-
-            while ($row = $result_images->fetch_assoc()) {
-                echo '<img src="' . $row['file_path'] . '" alt="Thumbnail" class="thumbnail">';
-            }
-            ?>
-        </div>
-    </div>
-    <div class="info">
-        <div class="title">
-            <!-- Using PHP to populate company name -->
-            <div class="company_name">
-                <h3><?php echo $user['company_name']; ?></h3>
-            </div>
-            <!-- Using PHP to populate the company logo -->
-            <div class="company_logo">
-                <img src="<?php echo $user['file_path']; ?>" alt="Company Logo">
-            </div>
-        </div>
-        <div class="rating_followers">
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-full"></i>
           </div>
-
-          <div class="followers">
-            <p>300k Follwers</p>
-          </div>
-
         </div>
+    
 
-        <div class="category">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quam, eveniet id illo repellendus expedita, pariatur sunt eaque aliquam fugit sequi commodi saepe sed vel dolorem molestiae temporibus nemo nesciunt.</p>
-        </div>
 
-        <div class="location">
-          <h4>Location : <span>Please login In order to view their Location</span></h4>
-       </div>
-
-       <div class="category">
-        <p><?php echo $user['category']; ?></p>
-     </div>
-
-     <div class="contact">
-      <h4>Email : <span>Please login In order to view their Email</span></h4>
-      <h4>Phone : <span>Please login In order to view their Phone number</span></h4>
-   </div>
-
-      </div>
-      </div>
-      </body>
-      </body>
-
-      <script>
-        "use strict";
+  
+    </section>
+    <script>
+       "use strict";
 
 (function startPage() {
   const menuBar = document.getElementById("menuBar");
   const navLinks = document.querySelector(".nav-links");
   menuBar.addEventListener("click", () => {
+  navLinks.style.display = 'flex';
     navLinks.classList.toggle("active");
   });
 })();
-
-       document.addEventListener("DOMContentLoaded", function () {
-  const mainImage = document.querySelector(".main-image img");
-  const thumbnails = document.querySelectorAll(".thumbnail");
-
-  thumbnails.forEach((thumbnail) => {
-    thumbnail.addEventListener("click", () => {
-      const thumbnailSrc = thumbnail.getAttribute('src');
-      mainImage.src = thumbnailSrc;
-    });
-  });
-});
-
-const messageInput = document.getElementById('messageInput');
-const sendButton = document.getElementById('sendButton');
-const messageBox = document.querySelector('.message-box');
-
-function sendMessage() {
-    const message = messageInput.value.trim();
-
-    if (message !== '') {
-        const newMessage = document.createElement('div');
-        newMessage.classList.add('message');
-        newMessage.textContent = message;
-
-        messageBox.appendChild(newMessage);
-
-        messageInput.value = '';
-    }
-}
-
-sendButton.addEventListener('click', sendMessage);
-
-messageInput.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        sendMessage();
-    }
-});
+    </script>
 
 
-      </script>
-      
 </body>
 </html>
-
-<?php
-    } else {
-        echo "User not found.";
-    }
-
-    $stmt->close();
-    $conn->close();
-} else {
-    echo "User ID not provided.";
-}
-?>

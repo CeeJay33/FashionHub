@@ -3,7 +3,7 @@
     include "config.php";
    $unique_id = $_SESSION['unique_id'];
     if (empty($unique_id)) {
-        header("Location: Login.php");
+        header("Location: LoginC.php");
     }
     $qry = mysqli_query($conn, "SELECT * FROM userc WHERE unique_id = '{$unique_id}'");
     if (mysqli_num_rows($qry) > 0) {
@@ -341,9 +341,9 @@ form input[type="file"]{
             Button = form.querySelector('.submit input');
         errorText = document.querySelector('.error-text');
 
-                        Button.onclick = (e) => {
-                    e.preventDefault(); 
-                };
+                //         Button.onclick = (e) => {
+                //     e.preventDefault(); 
+                // };
 
 
             Button.onclick = () => {
@@ -354,7 +354,7 @@ form input[type="file"]{
                         if (xhr.status === 200) {
                             let data = xhr.response.trim();
                     if (data === "success") {
-                        location.href = './users.php';
+                        location.href = 'users.php';
                     } else {
                         errorText.textContent = data;
                         errorText.style.display = 'block';

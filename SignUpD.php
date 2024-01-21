@@ -305,6 +305,10 @@ select {
                     <input type="text" name="lname" placeholder="Last Name" id="myInput"  pattern="[a-zA-Z'.''\s]*">
                 </div>
                 <div class="input">
+                    <label for="cname">Company's Name</label>
+                    <input type="text" name="cname" placeholder="" id="myInput"  pattern="[a-zA-Z'.''\s]*">
+                </div>
+                <div class="input">
                         <label for="input1">Experience</label>
                         <input type="text" id="input1" name="Experience" required placeholder="eg.. 10 years">
                       </div>
@@ -347,7 +351,7 @@ select {
                 <input type="submit" style="background-color:  #000;border-radius: 20px;border: none;" value="SignUp Now" class="button" >
             </div>
         </form>
-        <div class="link">Already Signed up? <a href="./Login.php">Login Now</a></div>
+        <div class="link">Already Signed up? <a href="./LoginD.php">Login Now</a></div>
     </div>
     <script>
 

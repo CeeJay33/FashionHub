@@ -49,7 +49,7 @@
 <body>
     <div class="form" style="text-align: center;max-width: 500px;">
         <h2>Verify Your Account</h2>
-        <p style='background-color: rgb(194, 228, 193);color: green;"'>We sent you a Password reset link please check your email</p>
+        <p style='color: green;"'>We sent you a Password reset link please check your email</p>
             <div class="submit">
                 <a href="https://www.gmail.com"><input type="submit" style="background-color:  #088178;border: none;" value="Open Gmail" class="button"></a>
             </div>

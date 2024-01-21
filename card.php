@@ -39,6 +39,7 @@
     body{
         background: #fafdff;
         overflow: hidden;
+        font-family: sans-serif;
     }
 
     .navigation{
@@ -237,6 +238,13 @@
   padding: 15px; /* Add padding to the card */
 }
 
+.card h1{
+  padding-bottom: 10px;
+}
+.card p{
+  padding-bottom: 5px;
+}
+
 .card img{
   max-width: 100%;
   max-height: 300px;
@@ -268,6 +276,10 @@ button {
   font-size: 22px;
   color: black;
   margin: 5px; /* Add margin to the social media icons */
+}
+
+.card i{
+  color: gold;
 }
 
 button:hover, a:hover {
@@ -367,19 +379,19 @@ button:hover, a:hover {
             <img src="others/hmm-removebg-preview.png" alt="">
             <ul class="list">
         <li class="notification-badge">
-            <a href="users.html" class="active" title="Home">
+            <a href="users.php" class="active" title="Home">
                 <i class="fa-solid fa-house"></i>
                 <span class="badge">5</span>
             </a>
         </li>
-        <li><a href="#news" title="Contact"><i class="fa-solid fa-phone"></i></a></li>
+        <li><a href="contactcus.php" title="Contact"><i class="fa-solid fa-phone"></i></a></li>
         <li class="dropdown" title="About">
             <button class="dropbtn"><i class="fa-solid fa-circle-info"></i></button>
             <div class="dropdown-content"></div>
         </li>
     </ul>
     <ul class="third">
-        <li><a href="users.html"><i class="fa-solid fa-tags"></i></a></li>
+        <li><a href=""><i class="fa-solid fa-tags"></i></a></li>
         <div class="notification-badge">
     <a href="#message" title="Messages">
     <i class="fab fa-facebook-messenger" id="open_message"></i>
@@ -414,30 +426,27 @@ button:hover, a:hover {
           <?php
 include "config.php";
 
-$sql = "SELECT DISTINCT images.user_id, images.file_path, userd.fname, userd.lname
-        FROM images
-        INNER JOIN userd ON images.user_id = userd.uniqued";
+include "config.php";
 
-$unique_users_data = $conn->query($sql);
-$unique_user_ids = array();
+$sql = "SELECT file_path, company_name, uniqued FROM userd";
+$user_data = $conn->query($sql);
 
-while ($row = mysqli_fetch_assoc($unique_users_data)) {
-    if (!in_array($row['user_id'], $unique_user_ids)) {
-        $unique_user_ids[] = $row['user_id'];
+while ($row = mysqli_fetch_assoc($user_data)) {
+    $unique_id = $row['uniqued'];
 ?>
             <div class="card" >
                 <img src="<?php echo $row['file_path'] ?>" alt="User Image" style="width:100%">
-                <h1><?php echo $row['fname'] . ' ' . $row['lname'] ?></h1>
+                <h1><?php echo $row['company_name'] ?></h1>
                 <p class="title">Fashion Designer</p>
                 <a href="#"><i class="fa fa-star"></i></a>
                 <a href="#"><i class="fa fa-star"></i></a>
                 <a href="#"><i class="fa fa-star"></i></a>
                 <a href="#"><i class="fa fa-star"></i></a>
-                <p><button onclick="Contact()">Contact</button></p>
+                <p><button><a href="intro.php?uniqued=<?php echo $unique_id; ?> "style="color: #fff;" >Contact</a></button></p>
             </div>
             <?php
     }
-}
+
 ?>
 
         </div>

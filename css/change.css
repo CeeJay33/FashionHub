@@ -1,0 +1,54 @@
+/* Light mode styles */
+body {
+    /* Define your light mode styles */
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+  }
+
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #18181b; 
+    color: #ffffff; 
+  }
+
+  body.dark-mode .navigation{
+    background-color: #18181b;
+  }
+  body.dark-mode .navigation i{
+    color: rgb(25, 147, 235);
+  }
+
+  body.dark-mode .lay_color {
+    background-color: #0b0b0c;
+}
+
+  body.dark-mode .des li {
+    list-style: none;
+    line-height: 30px;
+    font-size: 15px;
+    color: #fff;
+    opacity: 0.8;
+    font-family: sans-serif;
+} 
+
+body.dark-mode .chip a{
+    color: #fff;
+}
+
+body.dark-mode #contact-details .details h2, #form-details form h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+  color: rgb(25, 147, 235);
+}
+@media (max-width: 500px){
+
+    body.dark-mode .navigation{
+        background-color: #18181b;
+      }
+      
+body.dark-mode .nav-links{
+    background-color: #18181b;
+}
+}
+  

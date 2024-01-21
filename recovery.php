@@ -44,7 +44,7 @@
                     <input type="email" name="email" placeholder="Enter your Email" required >
                 </div>
             <div class="submit">
-                <input type="submit" style="background-color:  #088178;border: none;" value="Proceed" class="button">
+                <input type="submit" style="background-color:  #000;border: none;" value="Proceed" class="button">
             </div>
         </form>
     </div>

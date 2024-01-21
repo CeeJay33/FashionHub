@@ -17,11 +17,12 @@ if(isset($_GET['uniqued'])) {
         $Experience = $user['experience'];
         $Category = $user['category'];
 
-        // Display user information and images
+       // Display user information and images
         echo '<div class="lay_color">';
         echo '<div class="chip">';
         echo '<img src="' . $file_path . '" loading="lazy" width="96" height="96">';
-        echo '<span style="opacity: 0.7;"><strong>' . $user_name . ', Posted</strong></span>';
+        echo '<span style="opacity: 1;"><a href="intro.php?uniqued=' . $user_id . '" style="text-decoration: none;
+        "><strong>' . $user_name . ', Posted</strong></a></span>';
         echo '</div>';
         echo '<div class="stories">';
         echo '<ul class="des">';
@@ -41,7 +42,6 @@ if(isset($_GET['uniqued'])) {
         }
 
         echo '</div>'; // Close images div
-        echo '<hr noshade width="100%" size="1px">';
         echo '<div class="social">';
         echo 
         "<div class='Message'>
@@ -56,7 +56,7 @@ if(isset($_GET['uniqued'])) {
 
 
     } else {
-        echo "User not found";
+        echo "";
     }
 } else {
     echo "No user ID provided";

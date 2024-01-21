@@ -3,7 +3,7 @@
   include "config.php";
   $unique_id = $_SESSION['unique_id'];
   if(empty($unique_id)){
-      header("Location: Login.php");
+      header("Location: LoginC.php");
   }
   $qry = mysqli_query($conn, "SELECT * FROM userc WHERE unique_id = '{$unique_id}'");
   if(mysqli_num_rows($qry) > 0){
@@ -27,6 +27,7 @@
     <meta name="keywords" content="Clothes,bags,shoes,">
 	<script src="https://kit.fontawesome.com/d5bd3063f6.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" type="text/css" href="css/change.css">
     <title>Kay_Jay_Boutique</title>
     <link rel="icon" href="./others/logo.png" type="image/x-icon">
     <style>
@@ -34,12 +35,48 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        
     }
 
     body{
         background: #fafdff;
         overflow: hidden;
     }
+    .nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navigation img {
+  width: 180px;
+  height: 80px;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.list li {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.list li a {
+  color: #000;
+  text-decoration: none;
+}
+
+
+
+.menu-bar {
+  width: 60px;
+  height: 40px;
+  display: none;
+}
 
     .navigation{
     display: flex;
@@ -136,9 +173,12 @@
   display: flex;
 }
 
-.list{
+.list {
     display: flex;
-    list-style: none;
+    /* justify-content: center; */
+    /* list-style: none; */
+    align-items: center;
+    margin-right: 8rem;
     gap: 50px;
     font-family: sans-serif;
     opacity: 0.9;
@@ -370,7 +410,7 @@
     border-radius: 10px;
     border: 1px solid #c2c2c2;
     border-top: none;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .chip {
   display: inline-block;
@@ -381,6 +421,10 @@
   line-height: 50px;
   border-radius: 25px;
   cursor: pointer;
+}
+
+.chip a{
+  color: #000;
 }
 
 .chip:hover{
@@ -404,6 +448,7 @@
     list-style: none;
     line-height: 30px;
     font-size: 15px;
+    color: #000;
     opacity: 0.7;
     font-family: sans-serif;
 
@@ -569,7 +614,7 @@ button:hover, a:hover {
 .chipz {
   background: #fff;
   display: inline-block;
-  width: 230px;
+  width: 270px;
   padding: 0 25px;
   height: 100px;
   font-size: 13px;
@@ -603,6 +648,7 @@ button:hover, a:hover {
   padding: 10px 15px;
   border: none;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .chipz .botin2{
@@ -612,6 +658,7 @@ button:hover, a:hover {
   padding: 10px 15px;
   border: none;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .message_space {
@@ -629,6 +676,7 @@ button:hover, a:hover {
             right: 0;
             height: 90vh;
             overflow-y: scroll;
+            display: none;
         }
 
         .message_space i{
@@ -698,22 +746,437 @@ button:hover, a:hover {
             border-radius: 10px;
             cursor: pointer;
         }
+
+        @media (max-width: 500px){
+
+          html{
+            overflow: hidden;
+          }
+
+          .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    padding: 0 2rem;
+    background-color: #fff;
+    z-index: 90;
+    left: -500px;
+    transition: all 1s ease-in;
+    width: 100%;
+   
+  }
+
+  
+  
+  .list li{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-bar {
+    display: block;
+  }
+
+  .nav-links.active {
+    left: 0;
+    transition: all 1s ease-out;
+  }
+
+
+
+.trend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.layout.layout1 {
+    display: none;
+    
+}
+
+.lay_color{
+  border: none;
+  width: 400px;
+    position: relative;
+    left: -20px;
+    padding-left: 25px;
+    border-radius: 1px;
+}
+
+.layout2 {
+  grid-column: span 4;
+    grid-row: span 27;
+    overflow-y: scroll;
+    z-index: 0;
+    height: 71vh;
+}
+
+.images .image img {
+    width: 170px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Updated CSS for the layout and chip cards */
+.layout.layout4 {
+    display: none;
+    flex-direction: row;
+    overflow-x: auto; 
+    overflow-y: hidden;
+    align-items: flex-end;
+    padding-bottom: 4rem; /* Add some bottom padding for better visibility */
+}
+.layout4{
+  display: none;
+  grid-column: span 4;
+  overflow-y: hidden;
+  height: 21vh;
+}
+
+.layout4 h3{
+  display: none;
+}
+
+.layout4 .chipz {
+    flex: 0 0 auto; /* Ensure chip cards don't grow or shrink */
+    margin-right: 10px; /* Add margin between chip cards */
+    background-color: #f2f2f2; /* Optional: Adjust background color */
+    padding: 10px 15px; /* Optional: Add padding to the chip cards */
+}
+
+        }
+
+
+
+        @media screen and (max-width: 408px) and (max-height: 768px) {
+
+html{
+  overflow-y: hidden;
+  height: 50vh;
+}
+
+.nav-links {
+display: flex;
+flex-direction: column;
+position: fixed;
+top: 0;
+bottom: 0;
+height: 100%;
+padding: 0 2rem;
+background-color: #fff;
+z-index: 90;
+left: -500px;
+transition: all 1s ease-in;
+width: 100%;
+
+}
+.list li{
+margin: 10px 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.menu-bar {
+display: block;
+}
+
+.nav-links.active {
+left: 0;
+transition: all 1s ease-out;
+}
+
+
+
+.trend {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+
+
+.layout.layout1 {
+display: none;
+
+}
+
+.lay_color{
+border: none;
+}
+
+.layout2 {
+grid-column: span 4;
+grid-row: span 27;
+overflow-y: scroll;
+z-index: 0;
+height: 80vh;
+}
+
+.images .image img {
+width: 160px;
+height: 200px;
+object-fit: cover;
+border-radius: 10px;
+}
+
+/* Updated CSS for the layout and chip cards */
+.layout.layout4 {
+    display: none;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: flex-end;
+    padding-bottom: 4rem;
+}
+.layout4{
+  display: none;
+grid-column: span 4;
+overflow-y: hidden;
+height: 21vh;
+}
+
+.layout4 h3{
+display: none;
+}
+
+.layout4 .chipz {
+flex: 0 0 auto; /* Ensure chip cards don't grow or shrink */
+margin-right: 10px; /* Add margin between chip cards */
+background-color: #f2f2f2; /* Optional: Adjust background color */
+padding: 10px 15px; /* Optional: Add padding to the chip cards */
+}
+
+}
+
+
+        @media screen and (max-width: 360px) and (max-height: 740px) {
+
+html{
+  overflow-y: hidden;
+  height: 50vh;
+}
+
+.nav-links {
+display: flex;
+flex-direction: column;
+position: fixed;
+top: 0;
+bottom: 0;
+height: 100%;
+padding: 0 2rem;
+background-color: #fff;
+z-index: 90;
+left: -500px;
+transition: all 1s ease-in;
+width: 100%;
+
+}
+.list li{
+margin: 10px 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.menu-bar {
+display: block;
+}
+
+.nav-links.active {
+left: 0;
+transition: all 1s ease-out;
+}
+
+
+
+.trend {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+
+
+.layout.layout1 {
+display: none;
+
+}
+
+.lay_color{
+border: none;
+}
+
+.layout2 {
+grid-column: span 4;
+grid-row: span 27;
+overflow-y: scroll;
+z-index: 0;
+height: 67vh;
+}
+
+.images .image img {
+width: 140px;
+height: 200px;
+object-fit: cover;
+border-radius: 10px;
+}
+
+/* Updated CSS for the layout and chip cards */
+.layout.layout4 {
+    display: none;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: flex-end;
+    padding-bottom: 4rem;
+}
+.layout4{
+  display: none;
+grid-column: span 4;
+overflow-y: hidden;
+height: 21vh;
+}
+
+.layout4 h3{
+display: none;
+}
+
+.layout4 .chipz {
+flex: 0 0 auto; /* Ensure chip cards don't grow or shrink */
+margin-right: 10px; /* Add margin between chip cards */
+background-color: #f2f2f2; /* Optional: Adjust background color */
+padding: 10px 15px; /* Optional: Add padding to the chip cards */
+}
+
+}
+
+@media screen and (max-width: 375px) and (max-height: 787px) {
+
+html{
+  overflow-y: hidden;
+  height: 50vh;
+}
+
+.nav-links {
+display: flex;
+flex-direction: column;
+position: fixed;
+top: 0;
+bottom: 0;
+height: 100%;
+padding: 0 2rem;
+background-color: #fff;
+z-index: 90;
+left: -500px;
+transition: all 1s ease-in;
+width: 86%;
+
+}
+.list li{
+margin: 10px 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.menu-bar {
+display: block;
+}
+
+.nav-links.active {
+left: 0;
+transition: all 1s ease-out;
+}
+
+
+
+.trend {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+
+
+.layout.layout1 {
+display: none;
+
+}
+
+.lay_color{
+border: none;
+}
+
+.layout2 {
+grid-column: span 4;
+grid-row: span 27;
+overflow-y: scroll;
+z-index: 0;
+height: 67vh;
+}
+
+.images .image img {
+width: 150px;
+height: 200px;
+object-fit: cover;
+border-radius: 10px;
+}
+
+/* Updated CSS for the layout and chip cards */
+.layout.layout4 {
+    display: none;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: flex-end;
+    padding-bottom: 4rem;
+}
+.layout4{
+  display: none;
+grid-column: span 4;
+overflow-y: hidden;
+height: 21vh;
+}
+
+.layout4 h3{
+display: none;
+}
+
+.layout4 .chipz {
+flex: 0 0 auto; /* Ensure chip cards don't grow or shrink */
+margin-right: 10px; /* Add margin between chip cards */
+background-color: #f2f2f2; /* Optional: Adjust background color */
+padding: 10px 15px; /* Optional: Add padding to the chip cards */
+}
+
+}
     </style>
 </head>
 <body>
     <header>
     <div class="navigation">
             <img src="others/hmm-removebg-preview.png" alt="">
+            <div class="nav-links active">
             <ul class="list">
         <li class="notification-badge">
-            <a href="users.html" class="active" title="Home">
+            <a href="users.php" class="active" title="Home">
                 <i class="fa-solid fa-house"></i>
                 <span class="badge">5</span>
             </a>
         </li>
-        <li><a href="contactus.html" title="Contact"><i class="fa-solid fa-phone"></i></a></li>
+        <li><a href="contactcus.php" title="Contact"><i class="fa-solid fa-phone"></i></a></li>
         <li class="dropdown" title="About">
-            <button class="dropbtn"><i class="fa-solid fa-circle-info"></i></button>
+            <a href="about.php"><i class="fa-solid fa-circle-info"></i></a>
             <div class="dropdown-content"></div>
         </li>
     </ul>
@@ -721,7 +1184,7 @@ button:hover, a:hover {
         <li><a href="users.html"><i class="fa-solid fa-tags"></i></a></li>
         <div class="notification-badge">
     <a href="#message" title="Messages">
-    <i class="fab fa-facebook-messenger" id="open_message"></i>
+    <i class="fab fa-facebook-messenger"></i>
         <span class="badge">3</span>
     </a>
 </div>
@@ -732,14 +1195,18 @@ button:hover, a:hover {
             </a>
         </li>
         <li>
-            <div class="chin">
-                <img src="images/pexels-andrew-personal-training-1322481.jpg" alt="Person" width="96" height="96">
-            </div>
+        <button id="darkModeToggle">
+    <i class="fas" id="lightModeIcon">&#xf185;</i>
+    <i class="fas d-none" id="darkModeIcon">&#xf186;</i>
+  </button>
         </li>
     </ul>
 
         </div>
-    
+        <div class="menu-bar" id="menuBar">
+        <i class="fas fa-bars" class="menu-bar" id="menuBar"></i>
+        </div>
+      </div>
         
     </header>
 
@@ -795,21 +1262,22 @@ button:hover, a:hover {
   </div>
 </div>
 
-<!-- another one -->
+<!-- another one --><!-- Updated HTML/PHP structure -->
 <div class="layout layout4">
     <h3>Fashion Designers</h3>
     <?php
     include "config.php";
-    $sql = "SELECT file_path, uniqued, fname, lname FROM userd";
+    $sql = "SELECT file_path, company_name, uniqued FROM userd";
     $user_data = $conn->query($sql);
 
     while ($row = mysqli_fetch_assoc($user_data)) {
         ?>
         <div class="chipz" data-uniqued="<?php echo $row['uniqued']; ?>">
             <img src="<?php echo $row['file_path']; ?>" alt="Person" width="96" height="96">
-            <span><strong><?php echo $row['fname'] . ' ' . $row['lname']; ?></strong></span>
+            <span><strong><?php echo $row['company_name'] ?></strong></span>
             <div class="add">
                 <button class="botin1">View Details</button>
+                <button class="botin2">Message</button>
             </div>
         </div>
         <?php
@@ -829,6 +1297,8 @@ button:hover, a:hover {
       </div>
   
     </section>
+
+    <script src="javaa.js"></script>
 
     <script>
       let sessionTimeout = 5 * 60 * 60 * 1000;
@@ -859,36 +1329,57 @@ button:hover, a:hover {
     const message = inputField.value.trim();
     if (message === '') return;
 
-    const messageSpace = document.getElementById('message_space');
-    
-    const currentDate = new Date();
+    const senderId = /* Your sender ID logic here */;
+    const receiverId = /* Your receiver ID logic here */;
 
-    const hours = currentDate.getHours();
-    const minutes = currentDate.getMinutes();
+    fetch('send_message.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            sender_id: senderId,
+            receiver_id: receiverId,
+            message_content: message
+        })
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data); // Log server response
+        // Add logic to handle success or display feedback to the user
 
-    const ampm = hours >= 12 ? 'pm' : 'am';
-    const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
-    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+        // After sending the message to the server, update UI if needed
+        const messageSpace = document.getElementById('message_space');
+        const currentDate = new Date();
+        const hours = currentDate.getHours();
+        const minutes = currentDate.getMinutes();
+        const ampm = hours >= 12 ? 'pm' : 'am';
+        const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
+        const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+        const currentTime = `${formattedHours}:${formattedMinutes} ${ampm}`;
 
-    const currentTime = `${formattedHours}:${formattedMinutes} ${ampm}`;
+        const Time = document.createElement('div');
+        Time.textContent = currentTime;
+        Time.className = 'time';
 
-    const Time = document.createElement('div');
-    Time.textContent = currentTime;
-    Time.className = 'time';
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'sender';
+        messageDiv.textContent = message;
 
-    const messageDiv = document.createElement('div');
-    messageDiv.className = 'sender';
-    messageDiv.textContent = message;
+        // Append the new message and time to the message container
+        messageSpace.appendChild(messageDiv);
+        messageSpace.appendChild(Time);
 
-    // sendding the div the div to the box
-    messageSpace.appendChild(messageDiv);
-    messageSpace.appendChild(Time);
-
-    inputField.value = '';
-
-    messageSpace.scrollTop = messageSpace.scrollHeight;
+        inputField.value = '';
+        messageSpace.scrollTop = messageSpace.scrollHeight;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Handle errors or display error messages
+    });
 }
 
+// Rest of your existing code remains unchanged
 document.getElementById('send_button').addEventListener('click', sendMessage);
 
 document.getElementById('message_input').addEventListener('keydown', function (event) {
@@ -897,26 +1388,86 @@ document.getElementById('message_input').addEventListener('keydown', function (e
     }
 });
 
-  function CloseMessage(){
+function CloseMessage() {
     let Message = document.getElementById('message_space');
     Message.style.display = 'none';
-  }
+}
 
-  document.getElementById('close').addEventListener('click', CloseMessage);
+document.getElementById('close').addEventListener('click', CloseMessage);
 
-  function OpenMessage(){
+function OpenMessage() {
     let Message = document.getElementById('message_space');
     Message.style.display = 'flex';
-  }
+}
 
-  document.getElementById('open_message').addEventListener('click', OpenMessage);
+document.getElementById('open_message').addEventListener('click', OpenMessage);
+
+
+
+
+
+
+
+
+
+
+
+
+function retrieveMessages() {
+    // Use the current user's ID obtained from PHP in your JavaScript code
+    const senderId = currentUserId; // Use the PHP user ID in JavaScript
+
+    // Logic to get receiver ID (replace this with your actual receiver ID logic)
+    const receiverId = getReceiverId(); // Replace this with your logic to get the receiver ID
+
+    // Fetch messages using sender and receiver IDs
+    fetch(`get_messages.php?sender_id=${senderId}&receiver_id=${receiverId}`)
+        .then(response => response.json())
+        .then(data => {
+            displayMessages(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Handle errors or display error messages
+        });
+}
+
+// Call retrieveMessages when the page loads or whenever needed
+retrieveMessages();
 
     </script>
+
+
+<script>
+    const messageSpace = document.getElementById('message_space');
+    document.addEventListener("DOMContentLoaded", function() {
+        var messageButtons = document.querySelectorAll('.botin2');
+
+        messageButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+              messageSpace.style.display = 'flex';
+                // You can replace the alert with your custom message box logic here
+            });
+        });
+    });
+
+    "use strict";
+
+(function startPage() {
+  const menuBar = document.getElementById("menuBar");
+  const navLinks = document.querySelector(".nav-links");
+  menuBar.addEventListener("click", () => {
+  navLinks.style.display = 'flex';
+    navLinks.classList.toggle("active");
+  });
+})();
+
+</script>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- Existing HTML and PHP code -->
 <!-- ... -->
-</script>
 <script>
     $(document).ready(function () {
     var clickedUsers = JSON.parse(localStorage.getItem('clickedUsers')) || [];

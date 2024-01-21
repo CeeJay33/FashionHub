@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Designer Portfolio Detail</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-info h1 {
+  margin-bottom: 5px;
+  font-size: 36px;
+  color: #333;
+}
+
+/* Previous styles remain unchanged */
+
+/* New styles for carousel navigation buttons */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  /* flex: 0 0 auto; */
+  margin: 0 auto;
+    text-align: center;
+}
+
+.slide img{
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+}
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Optional: Add media query for responsive design */
+@media (max-width: 768px) {
+  .slide img {
+    max-width: 300px;
+  }
+}
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+          <div class="profile-info">
+            <h1>Designer Name</h1>
+            <p>Category: Fashion Designer</p>
+            <p>Experience: 5 years</p>
+          </div>
+          <div class="carousel-container">
+            <div class="carousel">
+              <div class="slide">
+                <img src="./clothes/14bfb534902baca5437f1df9e7f12a80.jpg" alt="Design 1">
+              </div>
+              <div class="slide">
+                <img src="./clothes/3fd09b12bb0552a13034bebcf1b75c50.jpg" alt="Design 2">
+              </div>
+              <div class="slide">
+                <img src="./clothes/3fd09b12bb0552a13034bebcf1b75c50.jpg" alt="Design 2">
+              </div>
+              <div class="slide">
+                <img src="./clothes/3fd09b12bb0552a13034bebcf1b75c50.jpg" alt="Design 2">
+              </div>
+              <!-- Add more slides as needed -->
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">❮</button>
+            <button class="next" onclick="moveSlide(1)">❯</button>
+          </div>
+        </div>
+        <div class="profile-info">
+            <h1>Phone Number</h1>
+            <p>Email</p>
+            <p>Address</p>
+          </div>
+      </div>
+
+      <script>
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+function moveSlide(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("slide");
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
+
+      </script>
+</body>
+</html>

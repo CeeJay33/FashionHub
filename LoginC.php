@@ -340,10 +340,8 @@ Button.onclick = () => {
                 let data = xhr.response;
                 console.log(data);
                 if (data === "success") {
-                    // Redirect to the appropriate page based on the role
                   location.href = 'users.php';
                 } else {
-                    errorText.textContent = data; // Display the response error in the error-text element
                     errorText.style.display = 'block';
                     setTimeout(() => {
                         errorText.style.display = 'none';

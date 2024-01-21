@@ -13,7 +13,7 @@ use PHPMailer\PHPMailer\Exception;
     $email = mysqli_real_escape_string($conn, $_POST['email']);
 
     if(!empty($email)){
-        $sql = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
+        $sql = mysqli_query($conn, "SELECT * FROM userc WHERE email = '{$email}'");
         if (mysqli_num_rows($sql) > 0) {
            $row = mysqli_fetch_assoc($sql);
            $_SESSION['unique_id'] = $row['unique_id'];
@@ -33,11 +33,12 @@ use PHPMailer\PHPMailer\Exception;
                 $mail->setFrom('Chrismiracle911@gmail.com', 'Jay');
                 $mail->addAddress($email, $fname . ' ' . $lname);
                 $mail->Subject = 'Link to For Password reset';
-                $mail->Body = "Dear Valid Customer Please click the link to create a new password: <a href='wapm64/www/Finalpp/newpass.php'>Create new password</a>";
+                $mail->Body = "Dear Valid Customer, please click the link to create a new password: <a href='https://www.example.com/wapm64/www/Finalpp/newpass.php'>Create new password</a>";
+
 
                 $mail->send();
 
-                $sql3 = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
+                $sql3 = mysqli_query($conn, "SELECT * FROM userc WHERE email = '{$email}'");
                 if (mysqli_num_rows($sql3) > 0) {
                     $row = mysqli_fetch_assoc($sql3);
                     echo "success";
